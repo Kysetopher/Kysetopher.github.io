@@ -8,13 +8,13 @@ float lastX,lastY;
 void setup(){
 	loadTextures();
 	size(screen.width,screen.height,P3D);
-	img = loadImage("Assets/Wall.jpg");
+	img = loadImage("Assets/Wall.png");
 	stack = new Slider(width/2,height/2, width/4,height/1.5);
 }
 
 void draw(){
 
-	background(img);
+	background(100);
 	
 	pushMatrix();
 	if(stack.enbld)stack.draw();
