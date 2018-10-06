@@ -24,8 +24,9 @@ class Slider{
 		pushMatrix();
 		translate(posX,posY,-200);
 
-		for (int i = 0; i < index; i++) {   iterate(i);  }
-		for (int i = limit-1; i >= index; i--) {   iterate(i);  }
+		for (int i = 0; i < limit-1; i++) {   iterate(i);  }
+		//for (int i = 0; i < index; i++) {   iterate(i);  }
+		//for (int i = limit-1; i >= index; i--) {   iterate(i);  }
 		popMatrix();
 	}
 
@@ -58,10 +59,23 @@ class Slider{
 	index+=velocity;
 	velocity *=.5;
 	velocity += (round(index)- index)*.01;
+	
+	if(index > limit-1) velocity -= (index + 4- limit)*.1;
+	if(index < 0) velocity -= index*.1;
+
 	}
 
 	void mousePressed(){
-    if(cursor<limit && cursor>0) velocity +=(cursor-index)/2;
+    if(cursor<limit-1 && cursor>-1) velocity +=(cursor-index)/2;
+	}
+	
+	void mouseDragged(){ 
+	velocity *=.001;
+	index+= (lastX-mouseX)/wdth;
+	}
+	
+	void mouseReleased(){
+	velocity = (lastX - mouseX);
 	}
 	
 	void cbrt(float x){

@@ -33,17 +33,21 @@ class Item{
 	}
 
 }
-/*
-class Button
 
-{
+class Button{
+	int wdth,hght,posX,posY;
+	String label, URL;
+	PImage display;
 
-  Button(int w, int h, int x, int y) {
+  Button(int w, int h, int x, int y,String l, String u) {
     wdth = w;
-    hght = h
+    hght = h;
 	posX = x;
 	posY = y;
-	color=
+	label = l;
+	URL = u;
+	
+
   }
   void update() {
   }
@@ -51,8 +55,7 @@ class Button
    boolean pressed() {
     if(over) {
 		
-	}
-   
+	} 
   }
   boolean over() {
 	if (mouseX >= posX && mouseX <= posX+wdth && 
@@ -65,11 +68,19 @@ class Button
 
   void draw() 
   {
+	  pushMatrix();
+	//rotateY(90);
+	
     stroke(255);
     if(over()){
-		
-    rect(posX, posY, wdth, hght);
+		stroke(0);
 	}
+	rect(posX, posY, wdth, hght);
+	fill(0);
+
+	textSize(100);
+	translate(0,0,50);
+	text(label, posX+ wdth/4,posY+hght/2);
+	popMatrix();
   }
 }
-*/

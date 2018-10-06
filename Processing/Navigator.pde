@@ -22,7 +22,6 @@ class Navigator{
 		for (int i=0;i<buttons.length;i++){
 			buttons[i] = new Panel(textures[2],labels[i],0,y + 100 * i, w, 100);
 		}
-		
 	} 
 	
 	void draw() {
