@@ -24,7 +24,7 @@ class Slider{
 		pushMatrix();
 		translate(posX,posY,-200);
 
-		for (int i = 0; i < limit-1; i++) {   iterate(i);  }
+		for (int i = 0; i < limit; i++) {   iterate(i);  }
 		//for (int i = 0; i < index; i++) {   iterate(i);  }
 		//for (int i = limit-1; i >= index; i--) {   iterate(i);  }
 		popMatrix();
@@ -60,7 +60,7 @@ class Slider{
 	velocity *=.5;
 	velocity += (round(index)- index)*.01;
 	
-	if(index > limit-1) velocity -= (index + 4- limit)*.1;
+	if(index > limit) velocity -= (index +4 -  limit)*.1;
 	if(index < 0) velocity -= index*.1;
 
 	}
