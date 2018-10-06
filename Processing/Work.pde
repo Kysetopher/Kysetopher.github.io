@@ -58,9 +58,9 @@ class Slider{
 
 	index+=velocity;
 	velocity *=.5;
-	velocity += (round(index)- index)*.01;
+	velocity += (round(index)- index)*.05;
 	
-	if(index > limit) velocity -= (index +4 -  limit)*.1;
+	if(index > limit-1) velocity -= (index +1 -  limit)*.1;
 	if(index < 0) velocity -= index*.1;
 
 	}
