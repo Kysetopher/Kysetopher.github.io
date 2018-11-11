@@ -18,9 +18,7 @@ class Item{
 	void draw(){
 
 		image(display,-display.width/2, -display.height/2,display.width,display.height);
-		translate(0,0,-5);
-		//rect(-display.width/2 -6, -display.height/2-6,display.width+12,display.height+12);
-		//text( type, -display.width/2, display.height/2);
+		
 	}
 	void drawhover(){
 		rect(-display.width/2 -6, -display.height/2-6,display.width+12,display.height+12);
@@ -28,9 +26,7 @@ class Item{
 		rect(display.width/2 , -display.height/2-6,12,display.height+12);
 		text( type, -display.width/2, display.height/2);
 	}
-	void select(){
-		
-	}
+
 
 }
 
@@ -45,6 +41,57 @@ class Button{
 	posX = x;
 	posY = y;
 	label = l;
+	URL = u;
+	
+
+  }
+  void update() {
+  }
+  
+  boolean pressed() {
+    if(over) {
+		
+	} 
+  }
+  boolean over() {
+	if (mouseX >= posX && mouseX <= posX+wdth && 
+      mouseY >= posY && mouseY <= posY+hght) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  void draw() 
+  {
+	  pushMatrix();
+	//rotateY(90);
+	
+    stroke(255);
+    if(over()){
+		stroke(0);
+	}
+	rect(posX, posY, wdth, hght);
+	fill(0);
+
+	textSize(100);
+	translate(0,0,0);
+	text(label, posX+ wdth/4,posY+hght/2);
+	popMatrix();
+  }
+}
+
+
+class Link{
+	int wdth,hght,posX,posY;
+	String URL;
+	PImage display;
+
+  Link(int w, int h, int x, int y, String u) {
+    wdth = w;
+    hght = h;
+	posX = x;
+	posY = y;
 	URL = u;
 	
 
@@ -78,9 +125,7 @@ class Button{
 	rect(posX, posY, wdth, hght);
 	fill(0);
 
-	textSize(100);
-	translate(0,0,50);
-	text(label, posX+ wdth/4,posY+hght/2);
+
 	popMatrix();
   }
 }

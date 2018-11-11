@@ -1,0 +1,37 @@
+
+
+#header{
+	outline: 0px;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	background:light-gray;
+	text-align:center;
+	font-size:25px;
+}
+#header *{
+	border-collapse:collapse;
+}
+#header table{
+	height:100px;
+	width:100%;
+	box-shadow:0px 5px 5px #d3d3d3;
+}
+#header tr{
+
+}
+
+#margin{
+	width:30%;
+}
+
+#tab{
+	width:150px;
+}
+#tab:hover{
+	cursor:pointer;
+	color:#9a8154;
+
+	
+}

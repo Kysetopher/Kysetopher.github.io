@@ -1,28 +1,30 @@
 	
 /* @pjs transparent="true"; */
+
 Slider stack;
-Navigator nvgtr;
-PImage img;
+
+PImage img1,img2;
 float lastX,lastY;
-Button[] buttons;
+
 
 void setup(){
 	loadTextures();
 	buttons = new Button[3];
 	size(screen.width,screen.height,P3D);
-	img = loadImage("Assets/Wall.png");
+
 	stack = new Slider(width/2,height/2, width/4,height/1.5);
 
-	buttons[0]= new Button(200,200, width/4, 200,"test","url");
+
 }
 
 void draw(){
 
-	background(100);
+	background(0,0);
+
 	pushMatrix();
 	if(stack.enbld)stack.draw();
 	popMatrix();
-	//buttons[0].draw();
+
 
 }
 
@@ -46,12 +48,5 @@ void mouseDragged(){
 void mouseWheel(int delta){
 	stack.velocity += delta/2;
 }
-/*
-void console(){
-	textSize(32);
-	text(stack.limit,500,30);
-	text(stack.hght,500,60);
-}
-*/
 
 

@@ -2,68 +2,40 @@
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 
-    <head>
+<head>
 		<meta charset="UTF-8">
         <title>Chris Kyser</title>
-		<script type="text/javascript" src="jquery-3.3.1.min.js" id = "jQuery"></script>
-		<script type="text/javascript" src="processing.js" id = "parser"></script>
-		<LINK href = "stylesheet.css" rel = "stylesheet" type = "text/css">
-	</head>
+		<script type="text/javascript" src="Javascript/jquery-3.3.1.min.js" id = "jQuery"></script>
+		<script type="text/javascript" src="Javascript/processing.js" id = "parser"></script>
+		<LINK type="text/css" href="CSS/pjsCanvas.css" rel="stylesheet" >
+		<LINK type="text/css" href="CSS/header.css" rel="stylesheet" >
+</head>
 	
-    <body >
+<body>
 
-		<canvas id ="sketch" 
-		data-processing-sources = "Processing/Interface.pde Processing/Driver.pde 
-		Processing/Classes.pde Processing/Work.pde Processing/Loader.pde">
-		</canvas>
+	<canvas id ="sketch" 
+	data-processing-sources = "Processing/Interface.pde Processing/Driver.pde 
+	Processing/Classes.pde Processing/Work.pde Processing/Loader.pde">
+	</canvas>
 		
-		<script type="text/javascript" id ="interface">
+	<script type="text/javascript" id ="interface" src='Javascript/interface.js'></script>
+	
+	<div id='header'>
+		<table>
+			<tr>
+				<td id='margin'></td>
 
-			var sketch = false;
-			var json;
+				<td id='tab' >2D Artwork</td>
+				<td id='tab'>Projects</td>
+				<td id='tab'>Misc</td>
+				
+				<td id='margin' width='100%'></td>
 			
-			$.getJSON("objects.json", (data) => {
-				$.each(data, (index, value) => {
-				json = value;
-				});
-			});	
-			
-			(function bindSketch(){
-				sketch = Processing.getInstanceById('sketch');
-				if(!sketch) setTimeout(bindSketch,250);
-				else{ 
-				sketch.loadObjects(json);
-				sketch.options.isTransparent = true;
-				sketch.externals.sketch.options.isTransparent = true;
-					alert(json);
-				}
-			}());
-			
-			var getJson = function(path) {
-				$.getJSON(path, (data) => {
-					$.each(data, (index, value) => {
-					json = value;
-					});
-				});	
-				return json;
-			};
-			
-			function MouseWheelHandler(e){
-					var e = window.event || e;
-					var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail))); 
-					
-					sketch.mouseWheel(delta);
-			}
+			</tr>
+		</table>
+	</div>
 
-			var display = document.getElementById("sketch");
-			
-			if (display.addEventListener) {
-				display.addEventListener("mousewheel", MouseWheelHandler, false);
-				display.addEventListener("DOMMouseScroll", MouseWheelHandler, false);
-				display.addEventListener("keydown",KeyHandler, false);
-			}
-			else display.attachEvent("onmousewheel", MouseWheelHandler);
-		
-		</script>
-	</body>
+	
+	
+</body>
 </html>
