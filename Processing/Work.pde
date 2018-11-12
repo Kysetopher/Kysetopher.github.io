@@ -48,7 +48,6 @@ class Slider{
 			
 			//if( abs(focus)> 0.5)items[i].drawhover();
         popMatrix();
-		
       popMatrix();
 
   }
