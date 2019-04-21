@@ -23,13 +23,16 @@
 	width:30%;
 }
 
-#tab{
+#tab *{
 	width:150px;
+	text-decoration:none;
+	color:black;
 }
-#tab:hover{
 
+#tab a:hover{
 	cursor:pointer;
 	color:#9a8154;
 
-	
 }
+
+

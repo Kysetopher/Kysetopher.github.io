@@ -1,0 +1,47 @@
+
+body{
+	background-color:#443529;
+}
+#project{
+	padding-left:100px;
+	padding-right:100px;
+	width: 100%;
+}
+#project *{
+	border-collapse:collapse;
+	
+}
+#project table{
+	width:100%;
+}
+#project td{
+	width:20%;
+}
+#caption{
+	border-collapse:collapse;
+	padding-top:30px;
+	vertical-align:top;
+}
+#caption p{
+	font-size:20px;
+	color:white;
+}
+#caption h1{
+	font-size:60px;
+	color:#cca65b;
+}
+#caption a{
+	padding:20px;
+	border-radius:5px;
+	background:#ffefd3;
+	font-size:50px;
+	text-decoration:none;
+	vertical-align:center;
+	color:black;
+}
+#caption img{
+	padding:0px;
+	align:center;
+}
+
+
