@@ -5,11 +5,11 @@ body{
 #project{
 	padding-left:100px;
 	padding-right:100px;
+	padding-top:100px;
 	width: 100%;
 }
 #project *{
 	border-collapse:collapse;
-	
 }
 #project table{
 	width:100%;
@@ -18,8 +18,9 @@ body{
 	width:20%;
 }
 #caption{
+	padding-right:10px;
+	height:400px;
 	border-collapse:collapse;
-	padding-top:30px;
 	vertical-align:top;
 }
 #caption p{
@@ -30,18 +31,19 @@ body{
 	font-size:60px;
 	color:#cca65b;
 }
-#caption a{
-	padding:20px;
-	border-radius:5px;
-	background:#ffefd3;
-	font-size:50px;
+
+#gitLnk{
 	text-decoration:none;
-	vertical-align:center;
+	font-size:50px;
 	color:black;
 }
-#caption img{
-	padding:0px;
-	align:center;
+#gitLnk *{
+	border-radius:5px;
+	background:#ffefd3;
 }
+#gitLnk td {
+	padding:10px;
+}
+
 
 
