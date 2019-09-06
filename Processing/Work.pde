@@ -56,7 +56,7 @@ class Slider{
     cursor = pow((float)(mouseX - width/2)/ (wdth/2),3)/6 + index ;								// cursor is relational to index
 
 	index+=velocity;
-	velocity *=.5;
+	velocity *=0.01;
 	velocity += (round(index)- index)*.05;
 	
 	if(index > limit-1) velocity -= (index +1 -  limit)*.1;
