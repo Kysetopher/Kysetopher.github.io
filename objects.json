@@ -1,1 +1,58 @@
-{ "Items" :[   "Beastman","Forest","Fractal","Lion","Pout","Shroud","Tipper","Wisps" ] }
+{ "Item" :[ 
+	{
+	"name"  : "Arbor" ,
+	"path"  : "Images/Arbor.jpg",
+	"width" : "10",
+	"height": "8",
+	"unit"  : "in",
+	"medium": "Oil on canvas",
+	"type"  : "Image",
+	"date"  : "2017",
+	"about" : "We are not one but all. Where do I end and you begin? Let our roots fuse as one. Together we are as strong as a forest of tall trees."
+	},
+	{
+	"name"  : "Shroud" ,
+	"path"  : "Images/Shroud.jpg",
+	"width" : "10",
+	"height": "8",
+	"unit"  : "in",
+	"medium": "Oil on canvas",
+	"type"  : "Image",
+	"date"  : "2013",
+	"about" : "Take a glance shrouded in memory. distorted by ego. A vision of a cracked mirror in a broken time capsule."
+	},
+	{
+	"name"  : "Smog" ,
+	"path"  : "Images/Smog.jpg",
+	"width" : "10",
+	"height": "8",
+	"unit"  : "in",
+	"medium": "Acrylic on canvas",
+	"type"  : "Image",
+	"date"  : "2018",
+	"about" : "Nothing matters to the beast that lingers in the mind. If you dare to set it free beware what you may find."
+	},
+	{
+	"name"  : "Tipper" ,
+	"path"  : "Images/Tipper.jpg",
+	"width" : "10",
+	"height": "8",
+	"unit"  : "in",
+	"medium": "Oil on canvas",
+	"type"  : "Image",
+	"date"  : "2013",
+	"about" : "At tip of the hat and a slight nod. A passing note with a gentle tune. A slow stream that opens to a calm lake."
+	},
+	{
+	"name"  : "Waves" ,
+	"path"  : "Images/Waves.jpg",
+	"width" : "10",
+	"height": "8",
+	"unit"  : "in",
+	"medium": "Acrylic and Tumeric on canvas",
+	"type"  : "Image",
+	"date"  : "2018",
+	"about" : "Feel the tide of the seas as it mingles with the breeze."
+	}
+
+]}

@@ -1,14 +1,21 @@
+
+
 class object{
 
-	constructor( name , material){
-		this.name = name;
-		this.group = new THREE.Group();
+	constructor( item){
+
 		
-		this.geometry= new THREE.BoxGeometry( 10,15,.5);
+		this.texture = new THREE.TextureLoader().load( item.path);
+		this.material = new THREE.MeshBasicMaterial( { map: this.texture } );
+		this.material.transparent = true;
+		this.geometry= new THREE.BoxGeometry( item.width,item.height,.1);
 		this.mesh = new THREE.Mesh(this.geometry, this.material);
+
+
+		this.group = new THREE.Group();
 		this.group.matrixAutoUpdate= false;
-		
 		this.group.add(this.mesh);
+		
 	}
 
 }

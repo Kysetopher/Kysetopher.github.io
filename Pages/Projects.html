@@ -6,7 +6,9 @@
 		<meta charset="UTF-8">
 		<meta name="Portfolio" content="Artwork,Projects">
         <title>Chris Kyser</title>
-		<script type="text/javascript" src="../Javascript/jquery-3.3.1.min.js" id = "jQuery"></script>
+		
+		<script type="text/javascript" src="../Javascript/lib/jquery-3.3.1.min.js" id = "jQuery"></script>
+		
 		<LINK type="text/css" href="../CSS/header.css" rel="stylesheet" >
 		<LINK type="text/css" href="../CSS/footer.css" rel="stylesheet" >
 		<LINK type="text/css" href="../CSS/projects.css" rel="stylesheet" >
@@ -38,40 +40,16 @@
 		</table>
 	</div>
 	
-	<div id='header'>
-		<table>
-			<tr>
-				<td id='margin'></td>
-				<td id='tab' ><a href="../index.html">Artwork</a></td>
-				<td id='tab'>Projects</td>
-				<td id='margin'></td>
-			</tr>
-		</table>
-	</div>
+	<div id='header'></div>
+	<div id='footer'></div>
+
+	<script type="text/javascript">
+			$(document).ready(function(e) {
+			$('#header').load('Header.html',function(){});
+			$('#footer').load('Footer.html',function(){});
+			});
+	</script>
 	
-	<div id='footer'>
-		<table>
-			<td id='margin'></td>
-			<td id='margin'></td>
-			<td id='margin'></td>
-			
-			<td id='logo' ><td>
-				<a href="https://github.com/thekindsir">
-				<img src="../Assets/github.png"></img>
-			</a></td>
-			
-			<td id='logo' ><td>
-				<a href="https://www.linkedin.com/in/christopherkyser/">
-				<img src="../Assets/linkedin.png"></img>
-			</a></td>
-			
-			<td id='logo' ><td>
-				<a href="https://www.instagram.com/the_kindsir/">
-				<img src="../Assets/instagram.png"></img>
-			</a></td>
-			
-		</table>
-	<div>
 
 </body>
 </html>

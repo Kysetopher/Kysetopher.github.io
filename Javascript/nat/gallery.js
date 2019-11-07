@@ -1,10 +1,11 @@
 class gallery{
 	
-	constructor( n, material){
+	constructor(items){
 		this.group = new THREE.Group();
-		this.objects = [n];
-		for(var i = 0 ; i < n; i++){
-			this.objects[i]= new object( "ele" + i, material);
+		this.objects = [items.length];
+		for(var i = 0 ; i < items.length; i++){
+			
+			this.objects[i]= new object( items[i]);
 			this.group.add(this.objects[i].group);
 		}
 
@@ -24,13 +25,13 @@ class gallery{
 			for(var i = 0 ; i < this.objects.length; i++){
 
 				this.objects[i].group.matrix.compose(
-				new THREE.Vector3(Math.cbrt( i - this.index)*10,0,gaus(i-this.index,0,1)*20), 
+				new THREE.Vector3(Math.cbrt( i - this.index)*10,0,gaus(i-this.index,0,.7)*20), 
 				new THREE.Quaternion(0,0,0,0),
 				new THREE.Vector3(1,1,1));
 				
 				this.objects[i].mesh.setRotationFromAxisAngle(new THREE.Vector3(0,1,0),Math.cbrt(i-this.index)/2 *Math.PI);
 				//this.objects[i].mesh.matrix.setPosition(new THREE.Vector3(Math.cbrt( i - this.index),0,0));
-
+				this.objects[i].material.opacity =  gaus(i-this.index,0,4)*6;
 			}
 		}
 				

@@ -6,64 +6,61 @@
 		<meta charset="UTF-8">
 		<meta name="Portfolio" content="Artwork,Projects">
         <title>Chris Kyser</title>
+		
 		<script type="text/javascript" src="Javascript/lib/jquery-3.3.1.min.js" id = "jQuery"></script>
-		<script type="text/javascript" src="Javascript/lib/three.js" id = "jQuery"></script>
-		<LINK type="text/css" href="CSS/pjsCanvas.css" rel="stylesheet" >
+		<script type="text/javascript" src="Javascript/lib/three.js" id = "Three"></script>
+		
+		<LINK type="text/css" href="CSS/canvas.css" rel="stylesheet" >
+		<LINK type="text/css" href="CSS/overlay.css" rel="stylesheet" >
 		<LINK type="text/css" href="CSS/footer.css" rel="stylesheet" >
 		<LINK type="text/css" href="CSS/header.css" rel="stylesheet" >
 		
-		<script type="text/javascript" src="Javascript/nat/gallery.js" id = "jQuery"></script>
-		<script type="text/javascript" src="Javascript/nat/object.js" id = "jQuery"></script>
+		<script type="text/javascript" src="Javascript/nat/gallery.js" id = "Gallery"></script>
+		<script type="text/javascript" src="Javascript/nat/overlay.js" id = "Overlay"></script>
+		<script type="text/javascript" src="Javascript/nat/object.js" id = "Object"></script>
 		
 </head>
 	
 <body>
-	<script type="text/javascript" id ="sketch" src='Javascript/nat/canvas.js'></script>
-	
-	
-	<div id='header'>
+
+	<div id='overlay'>
 		<table>
-			<tr>
-				<td id='margin'></td>
-
-				<td id='tab' >Artwork</td>
-				<td id='tab' ><a href="Pages/Projects.html">Projects</a></td>
-
+			<tr><td>
 				
-				<td id='margin'></td>
-			
-			</tr>
+			</td>
+			<td>
+				<div id='rhtCol'><table>
+					<tr>
+						<td >
+							<div id='name'><p id='name'>text</p></div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div id='medium'><p id='medium'>text</p></div>
+						</td>
+					</tr>
+					<tr >
+						<td>
+							<div id='description'><p id='desc'>text</p></div>
+						</td>
+				</table></div>
+			</td></tr>
+	
 		</table>
 	</div>
 	
-	<div id='footer'>
-		<table>
-			<td id='margin'></td>
-			<td id='margin'></td>
-			<td id='margin'></td>
-			
-			<td id='logo' ><td>
-				<a href="https://github.com/thekindsir">
-				<img src="Assets/github.png"></img>
-			</a></td>
-			
-			<td id='logo' ><td>
-				<a href="https://www.linkedin.com/in/christopherkyser/">
-				<img src="Assets/linkedin.png"></img>
-			</a></td>
-			
-			<td id='logo' ><td>
-				<a href="https://www.instagram.com/the_kindsir/">
-				<img src="Assets/instagram.png"></img>
-			</a></td>
-			
-		</table>
-	<div>
+	<script type="text/javascript" id ="sketch" src='Javascript/nat/canvas.js'></script>
 	
-	
-	
+	<div id='header'></div>
+	<div id='footer'></div>
 
-
+	<script type="text/javascript">
+			$(document).ready(function(e) {
+			$('#header').load('Pages/Header.html',function(){});
+			$('#footer').load('Pages/Footer.html',function(){});
+			});
+	</script>
 	
 	
 </body>
