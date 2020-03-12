@@ -73,9 +73,13 @@ display.onmousemove = moveHandle;
 display.onmousedown = downHandle;
 display.onmouseup = upHandle;
 
-display.touchmove = moveHandle;
-display.touchstart = downHandle;
-display.touchend  = upHandle;
+display.addEventListener('touchmove', moveHandle, false);
+display.addEventListener('touchstart', downHandle, false);
+display.addEventListener('touchend', upHandle, false);
+
+//display.touchmove = moveHandle;
+//display.touchstart = downHandle;
+//display.touchend  = upHandle;
 
 
 
