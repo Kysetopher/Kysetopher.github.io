@@ -76,7 +76,7 @@ moveHandle=function(e){
 downHandle=function(e){
 	switch(e.touches.length) {
 		case 1:
-			mousex = e.targeTouches[0].clientX
+			mousex = e.targetTouches[0].clientX
 			mousedown = true;
 		break;
 		default:
