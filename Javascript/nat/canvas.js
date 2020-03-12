@@ -69,8 +69,8 @@ display.onwheel = function(e){
 
 moveHandle=function(e){
 	if(mousedown)
-	gal.velocity += Math.max(-.05, Math.min(.05, ( mousex- e.targetTouches[0].clientX )));
-	mousex = mousex- e.targetTouches[0].clientX;
+	gal.velocity += Math.max(-.5, Math.min(.5, ( mousex- e.targetTouches[0].clientX )));
+	mousex =e.targetTouches[0].clientX;
 }
 
 downHandle=function(e){
