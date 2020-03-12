@@ -9,7 +9,7 @@ document.body.appendChild( renderer.domElement );
 
 const display = document.getElementsByTagName("CANVAS")[0];
 //if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
-    // Take the user to a different screen here.
+ 
 
 
 
@@ -45,41 +45,54 @@ var setup = function(){
 	
 }();
 
-
 var mousex,mousedown= false;
 
-downHandle = function(e){
+display.onmousedown  = function(e){
 	mousex = e.clientX;
 	mousedown = true;
 }
-upHandle = function(e){
+
+display.onmouseup = function(e){
 	mousex=null;
 	mousedown = false;
 }
 
-moveHandle = function(e){
+display.onmousemove = function(e){
 	if(mousedown)
 	gal.velocity += Math.max(-.05, Math.min(.05, ( mousex- e.clientX )));
 	mousex = e.clientX;
 }
 
 display.onwheel = function(e){
-
 	gal.velocity += Math.max(-.7, Math.min(.7, (e.wheelDelta || -e.detail))); 
-
 }
 
-display.onmousemove = moveHandle;
-display.onmousedown = downHandle;
-display.onmouseup = upHandle;
+moveHandle=function(e){
+	if(mousedown)
+	gal.velocity += Math.max(-.05, Math.min(.05, ( mousex- e.clientX )));
+	mousex = e.clientX;
+}
+
+downHandle=function(e){
+	switch(e.touches.length) {
+		case 1:
+			mousex = e.targeTouches[0].clientX
+			mousedown = true;
+		break;
+		default:
+		break;		
+	}
+}
+
+upHandle=function(e){
+	mousex=null;
+	mousedown = false;
+}
 
 display.addEventListener('touchmove', moveHandle, false);
 display.addEventListener('touchstart', downHandle, false);
 display.addEventListener('touchend', upHandle, false);
 
-//display.touchmove = moveHandle;
-//display.touchstart = downHandle;
-//display.touchend  = upHandle;
 
 
 
