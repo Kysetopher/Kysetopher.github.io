@@ -8,7 +8,10 @@ renderer.setSize( window.innerWidth, window.innerHeight );
 document.body.appendChild( renderer.domElement );
 
 const display = document.getElementsByTagName("CANVAS")[0];
-display.onwheel = mouseWheel;
+//if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
+    // Take the user to a different screen here.
+
+
 
 var loop;
 
@@ -23,7 +26,7 @@ var getJson = function() {
         type: "GET",
         dataType: "json",
         url: "objects.json",
-        async: false 
+        async: false
     }).responseText; 
 
 };
@@ -38,14 +41,41 @@ var setup = function(){
 	scene.add(gal.group);
 	scene.add(light);
 	camera.position.z=20;
+
 	
 }();
 
-function mouseWheel(e){
+
+var mousex,mousedown= false;
+
+downHandle = function(e){
+	mousex = e.clientX;
+	mousedown = true;
+}
+upHandle = function(e){
+	mousex=null;
+	mousedown = false;
+}
+
+moveHandle = function(e){
+	if(mousedown)
+	gal.velocity += Math.max(-.05, Math.min(.05, ( mousex- e.clientX )));
+	mousex = e.clientX;
+}
+
+display.onwheel = function(e){
 
 	gal.velocity += Math.max(-.7, Math.min(.7, (e.wheelDelta || -e.detail))); 
 
 }
+
+display.onmousemove = moveHandle;
+display.onmousedown = downHandle;
+display.onmouseup = upHandle;
+
+display.touchmove = moveHandle;
+display.touchstart = downHandle;
+display.touchend  = upHandle;
 
 
 

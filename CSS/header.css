@@ -1,9 +1,10 @@
 
 
 #header{
-	position: absolute;
+	position: fixed;
 	left: 0px;
 	top: 0px;
+	border:none;
 	width: 100%;
 	text-align:center;
 	font-size:25px;
