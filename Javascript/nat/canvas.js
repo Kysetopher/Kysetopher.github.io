@@ -1,27 +1,27 @@
 
-var scene = new THREE.Scene();
-var camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.1, 1000);
-var renderer = new THREE.WebGLRenderer();
-var light = new THREE.AmbientLight( 0x404040 );
+var scene = new THREE.Scene();															   //     ----/
+var camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.1, 1000);	// Variables to be used as handles for THREE.js objects 
+var renderer = new THREE.WebGLRenderer();														   //--------------------------------------------------------
+var light = new THREE.AmbientLight( 0x404040 );											//     ----/
 
 renderer.setSize( window.innerWidth, window.innerHeight );
 document.body.appendChild( renderer.domElement );
 
 const display = document.getElementsByTagName("CANVAS")[0];
 //if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
- 
-
-
+	
+//----------------------------------------------------------------------------------------------------------------------------------------------------
+//																	]-SETUP-[
+//----------------------------------------------------------------------------------------------------------------------------------------------------
 
 var loop;
 
-
-var update = function(){
+var update = function(){		// Update Loop
 	gal.update();
 	ovl.update();
 }
 
-var getJson = function() {
+var getJson = function() { 		// Get JSON file containing objects to appear in Gallery
 	return $.ajax({ 
         type: "GET",
         dataType: "json",
@@ -31,10 +31,7 @@ var getJson = function() {
 
 };
 
-
-
-
-var setup = function(){
+var setup = function(){			// Load assets, setup, and add objects to the scene
 	var json =JSON.parse(getJson("objects.json"));
 	gal = new gallery(json.Item);
 	ovl = new overlay(json.Item,gal);
@@ -44,6 +41,15 @@ var setup = function(){
 
 	
 }();
+
+requestAnimationFrame(loop =() =>{
+	requestAnimationFrame(loop);
+	update();
+renderer.render(scene,camera);});
+
+//----------------------------------------------------------------------------------------------------------------------------------------------------
+//																	]-EVENT-LISTENERS-[
+//----------------------------------------------------------------------------------------------------------------------------------------------------
 
 var mousex,mousedown= false;
 
@@ -69,8 +75,8 @@ display.onwheel = function(e){
 
 moveHandle=function(e){
 	if(mousedown)
-	gal.velocity += Math.max(-.5, Math.min(.5, ( mousex- e.targetTouches[0].clientX )));
-	mousex =e.targetTouches[0].clientX;
+	gal.velocity += Math.max(-.05, Math.min(.05, ( mousex- e.targetTouches[0].clientX )));
+	mousex = e.targetTouches[0].clientX;
 }
 
 downHandle=function(e){
@@ -96,7 +102,4 @@ display.addEventListener('touchend', upHandle, false);
 
 
 
-requestAnimationFrame(loop =() =>{
-	requestAnimationFrame(loop);
-	update();
-	renderer.render(scene,camera);});
+
