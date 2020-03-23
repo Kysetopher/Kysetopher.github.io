@@ -1,27 +1,39 @@
 
-var scene = new THREE.Scene();															   //     ----/
-var camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.1, 1000);	// Variables to be used as handles for THREE.js objects 
-var renderer = new THREE.WebGLRenderer();														   //--------------------------------------------------------
-var light = new THREE.AmbientLight( 0x404040 );											//     ----/
 
+//------------------------------- THREE.js Handles -------------------------------------------------------
+var scene = new THREE.Scene();															  
+var camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.1, 1000);	
+var renderer = new THREE.WebGLRenderer();														   
+var light = new THREE.AmbientLight( 0x404040 );											
+
+//---------------------------- DOM Handles -----------------------------------------------------------------
 renderer.setSize( window.innerWidth, window.innerHeight );
 document.body.appendChild( renderer.domElement );
-
+	
 const display = document.getElementsByTagName("CANVAS")[0];
-//if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
+const head = document.getElementsByTagName('HEAD')[0];
+
+var cssMobile = document.createElement('mobile');
+cssMobile.rel = 'stylesheet';
+cssMobile.type = 'text/css';
+cssMobile.href = 'CSS/mobile.css';
+
+if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
+	head.appendChild(cssMobile);
+}
 	
 //----------------------------------------------------------------------------------------------------------------------------------------------------
-//																	]-SETUP-[
+//																	]-SETUP & LOOP-[
 //----------------------------------------------------------------------------------------------------------------------------------------------------
 
 var loop;
 
-var update = function(){		// Update Loop
+var update = function(){		//------- Update Loop
 	gal.update();
 	ovl.update();
 }
 
-var getJson = function() { 		// Get JSON file containing objects to appear in Gallery
+var getJson = function() { 		//------- Get JSON file containing objects to appear in Gallery
 	return $.ajax({ 
         type: "GET",
         dataType: "json",
@@ -31,13 +43,17 @@ var getJson = function() { 		// Get JSON file containing objects to appear in Ga
 
 };
 
-var setup = function(){			// Load assets, setup, and add objects to the scene
+var setup = function(){			//-------- Load assets, setup, and add objects to the scene
+
+
+	
 	var json =JSON.parse(getJson("objects.json"));
 	gal = new gallery(json.Item);
 	ovl = new overlay(json.Item,gal);
 	scene.add(gal.group);
 	scene.add(light);
 	camera.position.z=20;
+
 
 	
 }();
@@ -50,6 +66,22 @@ renderer.render(scene,camera);});
 //----------------------------------------------------------------------------------------------------------------------------------------------------
 //																	]-EVENT-LISTENERS-[
 //----------------------------------------------------------------------------------------------------------------------------------------------------
+window.onorientationchange = function(e){
+	console.log(e.type);
+	renderer.setSize( window.innerWidth, window.innerHeight );
+	camera.aspect = window.innerWidth / window.innerHeight;
+	camera.updateProjectionMatrix();
+	renderer.setSize( window.innerWidth, window.innerHeight );
+	camera.aspect = window.innerWidth / window.innerHeight;
+	camera.updateProjectionMatrix();
+}
+
+window.onresize = function(e){
+	renderer.setSize( window.innerWidth, window.innerHeight );
+	camera.aspect = window.innerWidth / window.innerHeight;
+	camera.updateProjectionMatrix();
+}
+
 
 var mousex,mousedown= false;
 
