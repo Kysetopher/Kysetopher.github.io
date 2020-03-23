@@ -18,9 +18,7 @@ cssMobile.rel = 'stylesheet';
 cssMobile.type = 'text/css';
 cssMobile.href = 'CSS/mobile.css';
 
-if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
-	head.appendChild(cssMobile);
-}
+
 	
 //----------------------------------------------------------------------------------------------------------------------------------------------------
 //																	]-SETUP & LOOP-[
@@ -53,6 +51,13 @@ var setup = function(){			//-------- Load assets, setup, and add objects to the 
 	scene.add(gal.group);
 	scene.add(light);
 	camera.position.z=20;
+	
+	if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
+		head.appendChild(cssMobile);
+		if(screen.orientation == 0)
+			camera.position.z=40;
+	
+	} 
 
 
 	
@@ -68,14 +73,11 @@ renderer.render(scene,camera);});
 //																	]-EVENT-LISTENERS-[
 //----------------------------------------------------------------------------------------------------------------------------------------------------
 window.onorientationchange = function(e){
-	if(screen.orientation == 0){
-			renderer.setSize( window.innerHeight, window.innerWidth );
-			camera.aspect = window.innerHeight, window.innerWidth;
-	} else {
+	if(screen.orientation == 0)
+		camera.position.z=40;
+	
 		renderer.setSize( window.innerWidth, window.innerHeight );
 		camera.aspect = window.innerWidth / window.innerHeight;
-	}
-		
 	
 	console.log(" " + screen.orientation);
 	camera.updateProjectionMatrix();
