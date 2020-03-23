@@ -58,6 +58,7 @@ var setup = function(){			//-------- Load assets, setup, and add objects to the 
 	
 }();
 
+//tba140668279000
 requestAnimationFrame(loop =() =>{
 	requestAnimationFrame(loop);
 	update();
@@ -67,12 +68,16 @@ renderer.render(scene,camera);});
 //																	]-EVENT-LISTENERS-[
 //----------------------------------------------------------------------------------------------------------------------------------------------------
 window.onorientationchange = function(e){
-	console.log(e.type);
-	renderer.setSize( window.innerWidth, window.innerHeight );
-	camera.aspect = window.innerWidth / window.innerHeight;
-	camera.updateProjectionMatrix();
-	renderer.setSize( window.innerWidth, window.innerHeight );
-	camera.aspect = window.innerWidth / window.innerHeight;
+	if(screen.orientation == 0){
+			renderer.setSize( window.innerHeight, window.innerWidth );
+			camera.aspect = window.innerHeight, window.innerWidth;
+	} else {
+		renderer.setSize( window.innerWidth, window.innerHeight );
+		camera.aspect = window.innerWidth / window.innerHeight;
+	}
+		
+	
+	console.log(" " + screen.orientation);
 	camera.updateProjectionMatrix();
 }
 
