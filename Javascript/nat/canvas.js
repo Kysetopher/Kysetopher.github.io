@@ -54,7 +54,7 @@ var setup = function(){			//-------- Load assets, setup, and add objects to the 
 	
 	if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
 		head.appendChild(cssMobile);
-		if(screen.orientation == 0)
+		if(screen.orientation.angle == 0)
 			camera.position.z=40;
 	
 	} 
@@ -73,7 +73,7 @@ renderer.render(scene,camera);});
 //																	]-EVENT-LISTENERS-[
 //----------------------------------------------------------------------------------------------------------------------------------------------------
 window.onorientationchange = function(e){
-	if(screen.orientation == 0)
+	if(screen.orientation.angle == 0)
 		camera.position.z=40;
 	
 		renderer.setSize( window.innerWidth, window.innerHeight );
