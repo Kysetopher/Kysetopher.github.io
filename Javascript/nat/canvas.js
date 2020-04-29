@@ -13,6 +13,7 @@ document.body.appendChild( renderer.domElement );
 const display = document.getElementsByTagName("CANVAS")[0];
 const head = document.getElementsByTagName('HEAD')[0];
 
+
 var cssMobile = document.createElement('mobile');
 cssMobile.rel = 'stylesheet';
 cssMobile.type = 'text/css';
@@ -80,7 +81,6 @@ window.onorientationchange = function(e){
 		renderer.setSize( window.innerWidth, window.innerHeight );
 		camera.aspect = window.innerWidth / window.innerHeight;
 	
-	console.log(" " + screen.orientation);
 	camera.updateProjectionMatrix();
 }
 
@@ -93,14 +93,21 @@ window.onresize = function(e){
 
 var mousex,mousedown= false;
 
+display.onclick = function(e) {
+	console.log("X:" + e.clientX + ", Y:" + e.clientY );
+	//if ( 0 > 0 e.clientX > && 0 > e.clientY > 0 ) gal.action();
+}
+
 display.onmousedown  = function(e){
 	mousex = e.clientX;
 	mousedown = true;
+	gal.enabled = false;
 }
 
 display.onmouseup = function(e){
 	mousex=null;
 	mousedown = false;
+	gal.enabled = true;
 }
 
 display.onmousemove = function(e){

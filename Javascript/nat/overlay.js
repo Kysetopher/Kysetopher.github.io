@@ -20,7 +20,7 @@ class overlay{
 						+ " x " + this.items[Math.round(this.gallery.index)].height
 						+ " " + this.items[Math.round(this.gallery.index)].unit );
 						
-			$("#description").text(this.items[Math.round(this.gallery.index)].about);				
+			$("#description").text(this.items[Math.round(this.gallery.index)].about );				
 						
 		}
 	}
