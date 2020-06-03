@@ -94,8 +94,11 @@ window.onresize = function(e){
 var mousex,mousedown= false;
 
 display.onclick = function(e) {
-	console.log("X:" + e.clientX + ", Y:" + e.clientY );
-	//if ( 0 > 0 e.clientX > && 0 > e.clientY > 0 ) gal.action();
+	if((window.innerWidth * 0.8) > e.clientX && e.clientX  > (window.innerWidth * 0.2))console.log("Half");
+	console.log("X:" + e.clientX + ", Y:" + e.clientY + "\n" + "X:" + window.innerWidth * 0.2 + " - " + window.innerWidth *0.8 + " Y:" + window.innerHeight * 0.15 + " - " + window.innerHeight * 0.85);
+	if ( ((window.innerWidth * 0.8) > e.clientX && e.clientX  > (window.innerWidth * 0.2)) && ((window.innerHeight * 0.85 ) > e.clientY && e.clientY > ( window.innerHeight * 0.15 ) )  ){
+		gal.action();
+	}
 }
 
 display.onmousedown  = function(e){

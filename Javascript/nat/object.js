@@ -8,7 +8,7 @@ class object{
 		this.texture = new THREE.TextureLoader().load( item.path);
 		this.material = new THREE.MeshBasicMaterial( { map: this.texture } );
 		this.material.transparent = true;
-		this.geometry= new THREE.BoxGeometry( item.width,item.height,.1);
+		this.geometry= new THREE.BoxGeometry( item.DWidth,item.DHeight,.1);
 		this.mesh = new THREE.Mesh(this.geometry, this.material);
 
 
