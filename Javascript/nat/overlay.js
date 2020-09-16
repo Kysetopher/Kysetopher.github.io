@@ -1,15 +1,22 @@
 
 class overlay{
-	constructor(items,gal){
-		this.element = document.getElementById('overlay');
+	constructor(items,gal, vwr){
+
 		this.items = items;
 		this.gallery = gal;
+
+//---	-	-	-	-	-	-	-	-	--]-EVENT-LISTENERS-}
+
+		
 	}
+	
 	update(){
 		var opacity = Math.abs(Math.round(this.gallery.index) - this.gallery.index);
 		
-		this.element.style.opacity = .9 - (opacity*10);
-		this.element.style.filter  = 'alpha(opacity=90)'
+		document.getElementById('info').style.opacity = .9 - (opacity*10);
+		
+		if(this.gallery.group.visible) document.getElementById('exit').style.opacity = .1;
+		else document.getElementById('exit').style.opacity = 1;
 		
 		if(this.items[Math.round(this.gallery.index)]){
 			$("#name").text(this.items[Math.round(this.gallery.index)].name 
@@ -25,6 +32,8 @@ class overlay{
 		}
 	}
 	
-	
+//----------------------------------------------------------------------------------------------------------------------------------------------------
+//																	]-EVENT-LISTENERS-[
+//----------------------------------------------------------------------------------------------------------------------------------------------------
 	
 }
