@@ -33,7 +33,29 @@
 </head>
 	
 <body>
-	
+<script>
+
+
+console.log($.ajax({
+  type:"GET",
+  headers: {
+  "Access-Control-Allow-Origin": "*",
+  "Authorization": "Basic uv9jv1tk-vm55-iakl:73u9-j4ltoscs2b73"
+  },
+  url: "https://api.printful.com/sync/products",
+  dataType: "json",
+  async: false
+
+  //headers: { Authorization: Basic uv9jv1tk-vm55-iakl:73u9-j4ltoscs2b73},
+}));
+
+
+//$.get( "https://api.printful.com/", function( data ) {
+ // $( ".result" ).html( data );
+ // alert( "Load was performed." );
+//});
+
+</script>
 		
 	<div >
 		<table id='overlay' >
