@@ -42,7 +42,7 @@ var getJson = function() { 		//------- Get JSON file containing objects to appea
 		//"Access-Control-Allow-Origin": "*",
 		},
         dataType: "json",
-		url: "http://kysetopher.github.io/objects.json",
+		url: "objects.json",
 		async: false
     }).responseText; 
 
