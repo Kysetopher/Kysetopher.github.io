@@ -38,9 +38,12 @@ var update = function(){		//------- Update Loop
 var getJson = function() { 		//------- Get JSON file containing objects to appear in Gallery
 	return $.ajax({ 
         type: "GET",
+		 headers: {
+		//"Access-Control-Allow-Origin": "*",
+		},
         dataType: "json",
-        url: "objects.json",
-        async: false
+		url: "http://kysetopher.github.io/objects.json",
+		async: false
     }).responseText; 
 
 };

@@ -37,17 +37,18 @@
 
 
 console.log($.ajax({
-  type:"GET",
-  headers: {
-  "Access-Control-Allow-Origin": "*",
-  "Authorization": "Basic uv9jv1tk-vm55-iakl:73u9-j4ltoscs2b73"
-  },
-  url: "https://api.printful.com/sync/products",
-  dataType: "json",
-  async: false
+	type:"GET",
 
-  //headers: { Authorization: Basic uv9jv1tk-vm55-iakl:73u9-j4ltoscs2b73},
-}));
+	url: "https://api.printful.com/sync/products",
+	dataType: "http",
+	async: true,
+  
+	headers: {
+	'Access-Control-Allow-Origin': 'https://api.printful.com/',
+	'Authorization': 'Basic uv9jv1tk-vm55-iakl:73u9-j4ltoscs2b73'
+	}
+	headers: { Authorization: Basic uv9jv1tk-vm55-iakl:73u9-j4ltoscs2b73},
+	}));
 
 
 //$.get( "https://api.printful.com/", function( data ) {
@@ -117,7 +118,8 @@ console.log($.ajax({
 	
 		</table>
 	</div>
-	<script type="text/javascript" id ="sketch" src='Javascript/nat/canvas.js'></script>
+	<script type="text/javascript" id ="sketch" src='Javascript/nat/canvas.js'>
+	</script>
 	
 	
 	<div id='header'></div>
@@ -126,7 +128,7 @@ console.log($.ajax({
 	<script type="text/javascript">
 			$(document).ready(function(e) {
 			//$('#header').load('Pages/Header.html',function(){});
-			$('#footer').load('Pages/Footer.html',function(){});
+			//$('#footer').load('Pages/Footer.html',function(){});
 			});
 	</script>
 	
