@@ -4948,6 +4948,7 @@ input[type="button"].btn-block {
 }
 .navbar-light .brand-img {
   border: 5px solid rgba(0, 0, 0, 0);
+  
 }
 
 .navbar-light .navbar-brand {
@@ -11438,7 +11439,7 @@ pre .code {
   transition: .5s !important;
   -weblit-transition: .5s !important;
   z-index: 2;
-  box-shadow: 0 5px 1px rgba(128, 128, 128, 0.13);
+  /* box-shadow: 0 5px 1px rgba(128, 128, 128, 0.13); */
 
   border-radius: 50%;
 }
