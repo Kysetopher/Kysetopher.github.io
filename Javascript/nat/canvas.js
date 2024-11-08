@@ -1,9 +1,10 @@
 
 
 //------------------------------- THREE.js Handles -------------------------------------------------------
-var scene = new THREE.Scene();															  
+var scene = new THREE.Scene();
+
 var camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.1, 1000);	
-var renderer = new THREE.WebGLRenderer();														   
+var renderer = new THREE.WebGLRenderer({ alpha: true });													   
 var light = new THREE.AmbientLight( 0x404040 );											
 
 //---------------------------- DOM Handles -----------------------------------------------------------------
