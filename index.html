@@ -24,6 +24,9 @@
 		<LINK type="text/css" href="CSS/overlay.css" rel="stylesheet" >
 		<LINK type="text/css" href="CSS/footer.css" rel="stylesheet" >
 		<LINK type="text/css" href="CSS/header.css" rel="stylesheet" >
+
+		<link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
+		<link rel="stylesheet" href="CSS/johndoe.css">
 		
 		<script type="text/javascript" src="Javascript/nat/gallery.js" id = "Gallery"></script>
 		<script type="text/javascript" src="Javascript/nat/overlay.js" id = "Overlay"></script>
@@ -32,101 +35,67 @@
 		
 </head>
 	
-<body>
-<script>
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+    <header class="header">
+        <div class="container">
+            <ul class="social-icons pt-3">
+                <li class="social-item"><a class="social-link text-light" href="#"><i class="ti-facebook" aria-hidden="false"></i></a></li>
+                <li class="social-item"><a class="social-link text-light" href="#"><i class="ti-twitter" aria-hidden="true"></i></a></li>
+                <li class="social-item"><a class="social-link text-light" href="#"><i class="ti-google" aria-hidden="true"></i></a></li>
+                <li class="social-item"><a class="social-link text-light" href="#"><i class="ti-instagram" aria-hidden="true"></i></a></li>
+                <li class="social-item"><a class="social-link text-light" href="#"><i class="ti-github" aria-hidden="true"></i></a></li>
+            </ul>  
+            <div class="header-content">
+                <h1 class="header-title">Chris Kyser</h1>
+                <h6 class="header-mono" >Computer Scientist | Artist</h6>
+                <button class="btn btn-primary btn-rounded"><i class="ti-printer pr-2"></i>Print Resume</button>
+            </div>
+        </div>
+    </header>
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-white" data-spy="affix" data-offset-top="510">
+        <div class="container">
+            <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse mt-sm-20 navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#resume" class="nav-link">Resume</a>
 
+                    </li>
+					<li class="nav-item">
+                        <a href="#casestudies" class="nav-link">Case Studies</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#gallery" class="nav-link">Artwork</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ml-auto">
+                   
+                </ul>
+            </div>
+        </div>
+    </nav>
+   
+	<div id="resume"></div>
+	<div id='casestudies'></div>
+	<div id='gallery'></div>
 
-console.log($.ajax({
-	type:"GET",
-
-	url: "https://api.printful.com/sync/products",
-	dataType: "http",
-	async: true,
-  
-	headers: {
-	'Access-Control-Allow-Origin': 'https://api.printful.com/',
-	'Authorization': 'Basic uv9jv1tk-vm55-iakl:73u9-j4ltoscs2b73'
-	}
-	//headers: { Authorization: Basic uv9jv1tk-vm55-iakl:73u9-j4ltoscs2b73},
-	}));
-
-
-//$.get( "https://api.printful.com/", function( data ) {
- // $( ".result" ).html( data );
- // alert( "Load was performed." );
-//});
-
-</script>
-		
-	<div >
-		<table id='overlay' >
-			<tr>
-				<td >
-				<div id='options'><table>
-					<tr>
-						<td rowspan='2'>
-							
-
-							<select id="drop">
-								<option  hidden disabled selected>Sort By</option>
-								<option value="date">Year</option>
-								<option value="name">Name</option>
-								<option value="medium">Medium</option>
-							</select>
-						</td>
-	
-					</tr>
-					
-			</table></div>
-				</td>
-				<td>
-					<div id = 'toolbar'><table>
-						<tr>
-							<td id='button'>
-							<image id='exit' src = "Assets/Exit.png" ></div>
-							</td>
-
-						</tr>
-					
-					</table></div>
-				</td>
-			</tr>
-		
-			<tr>
-			<td>
-
-			</td>
-			<td>
-				<div id='info'><table>
-					<tr>
-						<td >
-							<div id='name'><p id='name'>text</p></div>
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<div id='medium'><p id='medium'>text</p></div>
-						</td>
-					</tr>
-					<tr >
-						<td>
-							<div id='description'><p id='desc'>text</p></div>
-						</td>
-					</tr>
-				</table></div>
-			</td></tr>
-	
-		</table>
-	</div>
-	<script type="text/javascript" id ="sketch" src='Javascript/nat/canvas.js'>
-	</script>
-	
-	
 	<div id='header'></div>
 	<div id='footer'></div>
 
+	<script src="Javascript/nat/template.js"></script>
 	<script type="text/javascript">
 			$(document).ready(function(e) {
+			$('#about').load('Pages/About.html',function(){});
+			$('#resume').load('Pages/Resume.html',function(){});
+			$('#casestudies').load('Pages/CaseStudies.html',function(){});
+			$('#gallery').load('Pages/Gallery.html',function(){});
+			
+		
 			//$('#header').load('Pages/Header.html',function(){});
 			//$('#footer').load('Pages/Footer.html',function(){});
 			});
