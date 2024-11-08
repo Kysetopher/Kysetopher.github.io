@@ -11432,8 +11432,16 @@ pre .code {
   -weblit-transition: .5s !important;
   z-index: 2;
   box-shadow: 0 5px 1px rgba(128, 128, 128, 0.13);
-  width: 170px;
+
   border-radius: 50%;
+}
+ .brand-img-full {
+  width: 170px;
+} 
+
+.brand-img-small {
+  width: 80px; 
+  transform: scale(0.6); 
 }
 
 .navbar .brand .brand-txt {

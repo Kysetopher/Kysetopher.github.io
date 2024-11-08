@@ -1,5 +1,4 @@
-
-    $(document).ready(function() {
+  $(document).ready(function() {
         // Smooth scroll for navigation links
         $(".navbar .nav-link").on('click', function(event) {
             if (this.hash !== "") {
@@ -31,6 +30,15 @@
                     }
                 }
             });
+
+            // Resize brand image based on scroll position
+            if (currentScrollPos > 0) {
+                $('.brand-img').removeClass('brand-img-full');
+                $('.brand-img').addClass('brand-img-small');
+            } else {
+                $('.brand-img').removeClass('brand-img-small');
+                $('.brand-img').addClass('brand-img-full');
+            }
         }
 
         // Highlight nav link when scrolling
