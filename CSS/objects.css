@@ -1,6 +1,6 @@
 
-.scrollable-skills {
-	max-height: 500px;
+.scrollable-card {
+	max-height: 550px;
 	overflow-y: auto;
 	overflow-x:hidden;
 }
