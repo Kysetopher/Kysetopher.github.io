@@ -1,22 +1,6 @@
 
-
-#overlay{
-	pointer-events:none;
-	text-decoration:none;
-	font-size:25px;
-	color:#ffefd3;
-	z-index: 265;
-	position: absolute;
-	width:100%;
-}
-#overlay table{
-	padding-top:40px;
-	padding-left:10px;
-	padding-right:10px;
-	width:100%;
-
-}
 #name {
+	font-size:25px;
 	padding-top:10px;
 	padding-left:20px;
 	height:40px;
@@ -37,15 +21,6 @@
 	height:100%;
 }
 
-
-#button *{
-	
-	vertical-align:middle;
-}
-#button *:hover {
-	background:#9C9666;
-	color:white;
-}
 
 #toolbar {
 	pointer-events :fill;
@@ -80,6 +55,7 @@
 }
 
 #drop {
+	text-decoration:none;
 	border-collapse: collapse;
 
 	vertical-align:middle;
