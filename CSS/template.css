@@ -11400,7 +11400,7 @@ pre .code {
   position: absolute;
   background-color: black;
   left: 50%;
-  top: 50%;
+  top: -80%;
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
@@ -11411,10 +11411,14 @@ pre .code {
   -weblit-transition: .5s !important;
   z-index: 2;
   /* box-shadow: 0 5px 1px rgba(128, 128, 128, 0.13); */
-  width: 170px;
+  width: 200px;
   border-radius: 50%;
 }
 
+
+.brand-img-small {
+  width: 80px!important; 
+}
 
 .navbar .brand .brand-txt {
   position: relative;
