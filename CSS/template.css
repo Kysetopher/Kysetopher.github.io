@@ -4946,6 +4946,9 @@ input[type="button"].btn-block {
 .navbar-expand .navbar-toggler {
   display: none;
 }
+.navbar-light .brand-img {
+  border: 10px solid white;
+}
 
 .navbar-light .navbar-brand {
   color: rgba(0, 0, 0, 0.9);
@@ -4995,11 +4998,12 @@ input[type="button"].btn-block {
 .navbar-light .navbar-text a:hover, .navbar-light .navbar-text a:focus {
   color: rgba(0, 0, 0, 0.9);
 }
-
+.navbar-dark .brand-img {
+  border: 10px solid black;
+}
 .navbar-dark .navbar-brand {
   background-color:#000000 ;
   color: #000000;
-  border: 10px solid black;
 }
 
 .navbar-dark .navbar-brand:hover, .navbar-dark .navbar-brand:focus {
@@ -11422,7 +11426,7 @@ pre .code {
 
 .navbar .brand .brand-img {
   position: absolute;
-  background-color: white;
+  background-color: black;
   left: 50%;
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
