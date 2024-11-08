@@ -4998,6 +4998,7 @@ input[type="button"].btn-block {
 .navbar-dark .navbar-brand {
   background-color:#000000 ;
   color: #000000;
+  border: 10px solid nlack;
 }
 
 .navbar-dark .navbar-brand:hover, .navbar-dark .navbar-brand:focus {
@@ -11420,7 +11421,7 @@ pre .code {
 
 .navbar .brand .brand-img {
   position: absolute;
-  background-color: black;
+  background-color: white;
   left: 50%;
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
