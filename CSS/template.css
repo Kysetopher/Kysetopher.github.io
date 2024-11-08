@@ -11420,7 +11420,7 @@ pre .code {
 
 .navbar .brand .brand-img {
   position: absolute;
-  background-color: white;
+  background-color: black;
   left: 50%;
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
