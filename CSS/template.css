@@ -11422,14 +11422,14 @@ pre .code {
 
 .navbar .brand .brand-img {
   position: absolute;
-  /* background-color: white; */
+  background-color: white;
   left: 50%;
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   -weblit-transform: translate(-50%, -50%);
-  border: 10px solid white;
+  /* border: 10px solid white; */
   -webkit-transition: .5s !important;
   transition: .5s !important;
   -weblit-transition: .5s !important;
