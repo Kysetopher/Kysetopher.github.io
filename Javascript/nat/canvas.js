@@ -98,24 +98,44 @@ var transition = function( crnt, next){
 			}	
 		}
 
-document.getElementById('drop').onchange = function (e){
-	for (var i = scene.children.length - 1; i >= 0; i--) {
-			scene.remove(scene.children[i]);
-	}
-	json.Item.sort(function(a,b){
-		
-		
-				if(a[e.target.value] == b[e.target.value])return 0;
-				if(a[e.target.value] < b[e.target.value])return -1;
-				if(a[e.target.value] > b[e.target.value])return 1;
-	});
-
-	gal.clear();
-	gal= new gallery(json.Item);
-	ovl = new overlay(json.Item , gal );
-
-	scene.add(gal.group);
-}
+		function toggleDropdown() {
+			document.querySelector(".dropdown-options").classList.toggle("show-dropdown");
+		  }
+		  
+		  // Function to handle the selection of an option
+		  function selectOption(element) {
+			// Get the selected value and its associated ID
+			const value = element.getAttribute("data-id");
+			
+			// Update the selected display text
+			document.querySelector(".selected-option").textContent  = "Sort By : " + element.textContent ;
+		  
+			// Hide the dropdown options
+			document.querySelector(".dropdown-options").classList.remove("show-dropdown");
+		  
+			// Call the sorting logic with the selected value
+			handleSortChange(value);
+		  }
+		  
+		  // Function to handle sorting logic based on the selected value
+		  function handleSortChange(selectedValue) {
+			// The previous logic for handling sorting
+			for (let i = scene.children.length - 1; i >= 0; i--) {
+			  scene.remove(scene.children[i]);
+			}
+		  
+			json.Item.sort(function(a, b) {
+			  if (a[selectedValue] == b[selectedValue]) return 0;
+			  if (a[selectedValue] < b[selectedValue]) return -1;
+			  if (a[selectedValue] > b[selectedValue]) return 1;
+			});
+		  
+			gal.clear();
+			gal = new gallery(json.Item);
+			ovl = new overlay(json.Item, gal);
+		  
+			scene.add(gal.group);
+		  }
 //----------------------------------------------------------------------------------------------------------------------------------------------------
 //																	]-DISPLAY-EVENT-LISTENERS-[
 //----------------------------------------------------------------------------------------------------------------------------------------------------

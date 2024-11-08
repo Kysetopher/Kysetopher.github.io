@@ -19,12 +19,14 @@
             </div>
             <div class="col-lg-4">
                 <div class="card">
-                <select id="drop">
-                    <option  hidden disabled selected>Sort By</option>
-                    <option value="date">Year</option>
-                    <option value="name">Name</option>
-                    <option value="medium">Medium</option>
-                </select>
+                
+                        <div class="selected-option" onclick="toggleDropdown()">Sort By</div>
+                        <ul class="dropdown-options">
+                          <li data-id="date" onclick="selectOption(this)">Year</li>
+                          <li data-id="name" onclick="selectOption(this)">Name</li>
+                          <li data-id="medium" onclick="selectOption(this)">Medium</li>
+                        </ul>
+                      
             </div>
                     
              
