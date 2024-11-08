@@ -209,6 +209,7 @@ display.onmousemove = function(e){
 }
 
 display.onwheel = function(e){
+	e.preventDefault();
 	gal.velocity += Math.max(-.7, Math.min(.7, (e.wheelDelta || -e.detail))); 
 }
 
