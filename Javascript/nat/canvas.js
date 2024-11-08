@@ -3,13 +3,13 @@
 //------------------------------- THREE.js Handles -------------------------------------------------------
 var scene = new THREE.Scene();
 
-var camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.1, 1000);	
+var camera = new THREE.PerspectiveCamera(40, window.innerWidth / 500, 0.1, 1000);	
 var renderer = new THREE.WebGLRenderer({ alpha: true });													   
 var light = new THREE.AmbientLight( 0x404040 );											
 
 //---------------------------- DOM Handles -----------------------------------------------------------------
-renderer.setSize( window.innerWidth, window.innerHeight );
-document.body.appendChild( renderer.domElement );
+renderer.setSize( window.innerWidth, 500 );
+document.getElementById('gallery').appendChild(renderer.domElement);
 	
 const display = document.getElementsByTagName("CANVAS")[0];
 const head = document.getElementsByTagName('HEAD')[0];
