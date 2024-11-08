@@ -3,80 +3,21 @@
 <div >
     <div id="gallery"></div>
     <script type="text/javascript" id ="sketch" src='Javascript/nat/canvas.js'></script>
-    
-    <table id='overlay' >
-        <tr>
-            <td >
-            <div id='options'><table>
-                <tr>
-                    <td rowspan='2'>
-                        
 
-                        <select id="drop">
-                            <option  hidden disabled selected>Sort By</option>
-                            <option value="date">Year</option>
-                            <option value="name">Name</option>
-                            <option value="medium">Medium</option>
-                        </select>
-                    </td>
-
-                </tr>
-                
-        </table></div>
-            </td>
-            <td>
-            </td>
-        </tr>
-    
-        <tr>
-        <td>
-
-        </td>
-        <td>
-            <div id='info'><table>
-                <tr>
-                    <td >
-                        <div id='name'><p id='name'>text</p></div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <div id='medium'><p id='medium'>text</p></div>
-                    </td>
-                </tr>
-                <tr >
-                    <td>
-                        <div id='description'><p id='desc'>text</p></div>
-                    </td>
-                </tr>
-            </table></div>
-        </td></tr>
-
-    </table>
+    <select id="drop">
+        <option  hidden disabled selected>Sort By</option>
+        <option value="date">Year</option>
+        <option value="name">Name</option>
+        <option value="medium">Medium</option>
+    </select>
 </div>
-<div class="section contact" >
-    
-    <div id="map" class="map"></div>
+<div class="section" id='overlay'>
     <div class="container">
         <div class="row">
-            <div class="col-lg-8">
-                <div class="contact-form-card">
-                    <h4 class="contact-title">Send a message</h4>
-                    <form action="">
-                        <div class="form-group">
-                            <input  class="form-control" type="text" placeholder="Name *" required>
-                        </div>
-                        <div class="form-group">
-                            <input class="form-control" type="email" placeholder="Email *" required>
-                        </div>
-                        <div class="form-group">
-                            <textarea class="form-control" id=" placeholder="Message *" rows="7" required></textarea>
-                        </div>
-                        <div class="form-group ">
-                            <button type="submit" class="form-control btn btn-primary" >Send Message</button>
-                        </div>
-                    </form>
-                </div>
+            <div class="col-lg-8" id='info'>
+                <div id='name'><p id='name'>text</p></div>
+                <div id='medium'><p id='medium'>text</p></div>   
+                <div id='description'><p id='desc'>text</p></div>
             </div>
             <div class="col-lg-4">
                 <div class="contact-info-card">

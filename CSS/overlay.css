@@ -16,36 +16,15 @@
 	width:100%;
 
 }
-
-#info{
-
-	border-collapse: collapse;
-	padding-right:10%;
-	padding-left:60%;
-
-	width:400px;
-
-}
-#info *{
-	
-	border-collapse: collapse;
-	background:#9C9999;
-	border-radius:5px;
-}
-
-
 #name {
-	background:#9C9666;
 	padding-top:10px;
 	padding-left:20px;
 	height:40px;
-
-
 }
 #medium {
 	font-style: italic;
 	font-size:20px;
-	margin-left:25px;
+	padding-left:25px;
 	height:20px;
 
 
@@ -54,10 +33,8 @@
 	display:table-cell;
 	vertical-align:middle;
 	font-size:20px;
-	padding:30px;
+	padding:25px;
 	height:100%;
-
-
 }
 
 
