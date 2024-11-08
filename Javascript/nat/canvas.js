@@ -30,7 +30,6 @@ var loop;
 
 var update = function(){		//------- Update Loop
 	gal.update();
-	ovl.update();
 	vwr.update();
 
 
@@ -57,7 +56,6 @@ var setup = function(){			//-------- Load assets, setup, and add objects to the 
 	gal = new gallery(json.Item);
 
 	vwr = new viewer(json.Item,gal);
-	ovl = new overlay(json.Item,gal,vwr);
 	
 	scene.add(gal.group);
 	scene.add(vwr.sprite);
@@ -124,7 +122,6 @@ document.getElementById('drop').onchange = function (e){
 	gal.clear();
 	gal= new gallery(json.Item);
 	vwr = new viewer(json.Item,gal);
-	ovl = new overlay(json.Item,gal,vwr);
 	
 	scene.add(gal.group);
 	scene.add(vwr.sprite);
