@@ -4996,7 +4996,8 @@ input[type="button"].btn-block {
 }
 
 .navbar-dark .navbar-brand {
-  color: #fff;
+  background-color:#000000 ;
+  color: #000000;
 }
 
 .navbar-dark .navbar-brand:hover, .navbar-dark .navbar-brand:focus {
@@ -11435,6 +11436,7 @@ pre .code {
 
   border-radius: 50%;
 }
+
  .brand-img-full {
   width: 170px;
 } 
