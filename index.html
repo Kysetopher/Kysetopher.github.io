@@ -3,40 +3,28 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
-		<!-- Global site tag (gtag.js) - Google Analytics -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-139029908-1"></script>
-		<script>
-			window.dataLayer = window.dataLayer || [];
-			function gtag(){dataLayer.push(arguments);}
-			gtag('js', new Date());
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-139029908-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-139029908-1');
+    </script> 
+        
+    <meta charset="UTF-8">
+    <meta name="Portfolio" content="Artwork">
+    <title>Chris Kyser</title>
 
-			gtag('config', 'UA-139029908-1');
-		</script> 
-		
-		<meta charset="UTF-8">
-		<meta name="Portfolio" content="Artwork">
-        <title>Chris Kyser</title>
-		
-		<script type="text/javascript" src="Javascript/lib/jquery-3.3.1.min.js" id = "jQuery"></script>
-		<script type="text/javascript" src="Javascript/lib/three.js" id = "Three"></script>
-		<script type="text/javascript" src="Javascript/lib/simplebar.min.js"></script>
+    <link type="text/css" href="CSS/app.css" rel="stylesheet" >
+    <link type="text/css" href="CSS/objects.css" rel="stylesheet" >
+    <link type="text/css" href="CSS/footer.css" rel="stylesheet" >
+    <link type="text/css" href="CSS/header.css" rel="stylesheet" >
+    <link type="text/css" href="CSS/simplebar.min.css" rel="stylesheet" >
+    <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
+    <link rel="stylesheet" href="CSS/template.css">
 
-		<LINK type="text/css" href="CSS/app.css" rel="stylesheet" >
-		<LINK type="text/css" href="CSS/objects.css" rel="stylesheet" >
-		<LINK type="text/css" href="CSS/footer.css" rel="stylesheet" >
-		<LINK type="text/css" href="CSS/header.css" rel="stylesheet" >
-		<LINK type="text/css" href="CSS/simplebar.min.css" rel="stylesheet" >
-	
-
-		<link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
-		<link rel="stylesheet" href="CSS/template.css">
-		
-		<script type="text/javascript" src="Javascript/nat/gallery.js" id = "Gallery"></script>
-		<script type="text/javascript" src="Javascript/nat/overlay.js" id = "Overlay"></script>
-		<script type="text/javascript" src="Javascript/nat/object.js" id = "Object"></script>
-		<script type="text/javascript" src="Javascript/nat/viewer.js" id = "Viewer"></script>
-
-		
+    <script type="text/javascript" src="Javascript/lib/jquery-3.3.1.min.js" id="jQuery"></script>
 </head>
 	
 <body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
@@ -91,23 +79,30 @@
 	<div id='casestudies'></div>
 	<div id="resume"></div>
 	<div id='artwork'></div>
-
 	<div id='header'></div>
 	<div id='footer'></div>
 
+    <script type="text/javascript" src="Javascript/nat/gallery.js" id="Gallery"></script>
+    <script type="text/javascript" src="Javascript/nat/overlay.js" id="Overlay"></script>
+    <script type="text/javascript" src="Javascript/nat/object.js" id="Object"></script>
+    <script type="text/javascript" src="Javascript/nat/viewer.js" id="Viewer"></script>
+
+	<script type="text/javascript" src="Javascript/lib/three.js" id="Three"></script>
+    <script type="text/javascript" src="Javascript/lib/simplebar.min.js"></script>
+    <script type="text/javascript"src="Javascript/lib/bootstrap.bundle.js"></script>
+    <script type="text/javascript" src="Javascript/lib/bootstrap.affix.js"></script>
+
 	<script src="Javascript/nat/navigation.js"></script>
+
 	<script type="text/javascript">
 			$(document).ready(function(e) {
 			$('#about').load('Pages/About.html',function(){});
 			$('#resume').load('Pages/Resume.html',function(){});
 			$('#casestudies').load('Pages/CaseStudies.html',function(){});
 			$('#artwork').load('Pages/Artwork.html',function(){});
-			
-		
-			//$('#header').load('Pages/Header.html',function(){});
-			//$('#footer').load('Pages/Footer.html',function(){});
 			});
 	</script>
+
 	
 	
 </body>
