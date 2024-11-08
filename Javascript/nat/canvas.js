@@ -4,7 +4,7 @@
 var scene = new THREE.Scene();
 
 var camera = new THREE.PerspectiveCamera(35, window.innerWidth / 500, 0.1, 1000);	
-var renderer = new THREE.WebGLRenderer({ alpha: true });													   
+var renderer = new THREE.WebGLRenderer();													   
 var light = new THREE.AmbientLight( 0x404040 );											
 
 //---------------------------- DOM Handles -----------------------------------------------------------------
