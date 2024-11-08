@@ -30,7 +30,7 @@ var loop;
 
 var update = function(){		//------- Update Loop
 	gal.update();
-	vwr.update();
+	ovl.update();
 
 
 }
@@ -54,23 +54,15 @@ var setup = function(){			//-------- Load assets, setup, and add objects to the 
 		
 	
 	gal = new gallery(json.Item);
-
-	vwr = new viewer(json.Item,gal);
+	ovl = new overlay(json.Item, gal );
 	
 	scene.add(gal.group);
-	scene.add(vwr.sprite);
 	scene.add(light);
 	camera.position.z=20;
 	
 	if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
 		head.appendChild(cssMobile)
 		console.log(cssMobile);
-		if(screen.orientation.angle == 0){
-			vwr.sprite.position.z = -50;
-		} else vwr.sprite.position.x = -5;
-		camera.position.z= 15;
-		camera.position.y = 2;
-		vwr.sprite.position.y=2;
 	
 	}
 
@@ -97,7 +89,6 @@ var transition = function( crnt, next){
 			switch(e.target.id){
 				case "exit":
 				gal.enable();
-				vwr.disable();
 				document.getElementById('exit').visible=false;
 				break;
 				default:
@@ -121,25 +112,14 @@ document.getElementById('drop').onchange = function (e){
 
 	gal.clear();
 	gal= new gallery(json.Item);
-	vwr = new viewer(json.Item,gal);
-	
+	ovl = new overlay(json.Item , gal );
+
 	scene.add(gal.group);
-	scene.add(vwr.sprite);
 }
 //----------------------------------------------------------------------------------------------------------------------------------------------------
 //																	]-DISPLAY-EVENT-LISTENERS-[
 //----------------------------------------------------------------------------------------------------------------------------------------------------
 window.onorientationchange = function(e){
-	
-	if(screen.orientation.angle == 0){
-		vwr.sprite.position.z = -40;
-		vwr.sprite.position.x = 0;
-
-	} else {
-			vwr.sprite.position.z = 0;
-			vwr.sprite.position.x = -5;
-
-	}
 
 	
 		renderer.setSize( window.innerWidth, window.innerHeight );
@@ -167,7 +147,7 @@ display.onclick = function(e) {
 			if( 0.2 > gal.index - Math.round(gal.index) > -0.2){
 				switch(gal.objects[Math.round(gal.index)].type){
 					case "Image":
-						transition(gal, vwr);
+				
 						document.getElementById('exit').visible=true;
 						break;
 					default:
