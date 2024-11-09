@@ -1,6 +1,6 @@
 
 .scrollable-card {
-	max-height: 550px;
+	max-height: 530px;
 	overflow-y: auto;
 	overflow-x:hidden;
 }
