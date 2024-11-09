@@ -11513,7 +11513,7 @@ pre .code {
   background-position: inherit;
   background-repeat: inherit;
   background-attachment: inherit;
-  filter: blur(2px); /* Adjust blur intensity as needed */
+  filter: blur(5px); /* Adjust blur intensity as needed */
   z-index: -1; /* Keeps it behind the content */
 }
 .header .container {
