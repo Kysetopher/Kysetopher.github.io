@@ -1,88 +1,112 @@
 <!DOCTYPE html>
-<section class="section bg-custom-gray" >
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6 col-lg-4">
-                <div class="card">
-                   <div class="card-header">
-                        <div class="mt-2">
-                            <h4>Expertise</h4>
+<html lang="en">
+<body>
+    <section class="section bg-custom-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4>HeyJinn.ai</h4>
                             <span class="line"></span>  
                         </div>
-                    </div>
-                    <div class="card-body" data-simplebar>
-                        <h6 class="title text-danger">Hypothesis</h6>
-                        <P class="subtitle">A system designed for capturing users thoughts and organizing them automatically is capable of assisting the user with many different kinds of tasks.
-                             Advancements in artificial intelligence technology have made utilizing automated processes much more accessible.
-                             However, anticipating the users needs is an essential part of being helpful and avoid flooding the user with too many options.
-                             To collect the most important data the system must be designed to collect input from the user easily.</P>
-                        <hr>
-                        <h6 class="title text-danger">Design</h6>
-                        <P class="subtitle">
-                            Utilized Revit, Navisworks and Civil 3D to test construction simulation software. Wrote an extensive User Manual.
-                            Client training, support, marketing, technical documentation.</P>
+                        <div class="card-body">
+                            <h6 class="title text-danger">
+                                <button class="btn btn-link text-danger tab-button" data-target="tab-hypothesis">Hypothesis</button>
+                            </h6>
+                            <hr>
+                            <h6 class="title text-danger">
+                                <button class="btn btn-link text-danger tab-button" data-target="tab-design">Design</button>
+                            </h6>
+                            <hr>
+                            <h6 class="title text-danger">
+                                <button class="btn btn-link text-danger tab-button" data-target="tab-architecture">Architecture</button>
+                            </h6>
+                        </div>
                     </div>
                 </div>
-                
-            </div>
-            <div class="col-md-6 col-lg-8">
-                <div class="card">
-                    <div class="card-header">
-                         <div class="pull-left">
-                             <h4 class="mt-2">Skills</h4>
-                             <span class="line"></span>  
-                         </div>
-                     </div>
-                     <div class="card-body pb-2 scrollable-card" data-simplebar>
-                        <h6>JavaScript</h6>
-                        <div class="progress mb-3">
-                            <div class="progress-bar bg-danger" role="progressbar" style="width: 92%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                 </div>
-                 <div class="portfolio-item">
-                    <img src="Assets/pyroflora.png" class="img-fluid" alt="Download free bootstrap 4 admin dashboard, free boootstrap 4 templates">
-                    <div class="content-holder">
-                        <a class="img-popup" href="Assets/pyroflora.png"></a>
-                        <div class="text-holder">
-                            <h6 class="title">WEB</h6>
-                            <p class="subtitle">Expedita corporis doloremque velit in totam!</p>
-                        </div>
-                    </div>   
-                </div>         
-                <div class="card">
-                    <div class="card-header">
-                         <div class="mt-2">
-                             <h4>Education</h4>
-                             <span class="line"></span>  
-                         </div>
-                     </div>
-                     <div class="card-body">
-                         <h6 class="title text-danger">Computer Science</h6>
-                         <P>Southern Illinois University - Class of 2018</P>
-                         <P class="subtitle">Practical Artificial Intelligence, User Interface Design, Operating Systems, Computer Graphics, 3D Animation and Modeling, Linux/UNIX programming.</P>
-                     </div>
-                 </div>
-            </div>
-            <div class="card">
-                <div class="card-header">
-                     <div class="pull-left">
-                         <h4 class="mt-2">Languages</h4>
-                         <span class="line"></span>  
-                     </div>
-                 </div>
-                 <div class="card-body pb-2">
-                    <h6>English</h6>
-                     <div class="progress mb-3">
-                         <div class="progress-bar bg-danger" role="progressbar" style="width: 100%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                     </div>
-                    
-                     <h6>Spanish</h6>
-                     <div class="progress mb-3">
-                         <div class="progress-bar bg-danger" role="progressbar" style="width: 10%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                     </div>
-                 </div>
-             </div>
-        </div>
-    </div>            
-</section>
 
+                <div class="col-md-6 col-lg-8">
+
+                    <div id="tab-hypothesis" class="tab-content active">
+
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="mt-2">Hypothesis</h4>
+                                <span class="line"></span>
+                            </div>
+                            <div class="card-body">
+                                <p>A system designed for capturing users' thoughts and organizing them automatically is capable of assisting the user with many different kinds of tasks.
+                                Advancements in artificial intelligence technology have made utilizing automated processes much more accessible.
+                                However, anticipating the users' needs is an essential part of being helpful and avoiding flooding the user with too many options.
+                                To collect the most important data, the system must be designed to collect input from the user easily.</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <h6>JavaScript</h6>
+                                <div class="progress mb-3">
+                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 92%" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="tab-design" class="tab-content">
+
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="mt-2">Architecture</h4>
+                                <span class="line"></span>
+                            </div>
+                            <div class="card-body">
+                                <p>Utilized Revit, Navisworks, and Civil 3D to test construction simulation software. Wrote an extensive User Manual.
+                                Client training, support, marketing, technical documentation.</p>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="title text-danger">Computer Science</h6>
+                                <p>Southern Illinois University - Class of 2018</p>
+                                <p>Practical Artificial Intelligence, User Interface Design, Operating Systems, Computer Graphics, 3D Animation and Modeling, Linux/UNIX programming.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                   
+
+                    <!-- Languages Content -->
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="mt-2">Languages</h4>
+                            <span class="line"></span>
+                        </div>
+                        <div class="card-body">
+                            <h6>English</h6>
+                            <div class="progress mb-3">
+                                <div class="progress-bar bg-danger" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <h6>Spanish</h6>
+                            <div class="progress mb-3">
+                                <div class="progress-bar bg-danger" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>            
+    </section>
+    <script>
+        document.querySelectorAll('.tab-button').forEach(button => {
+            button.addEventListener('click', () => {
+                // Hide all tab contents
+                document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+                // Show the target tab content
+                const target = button.getAttribute('data-target');
+                document.getElementById(target).classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>

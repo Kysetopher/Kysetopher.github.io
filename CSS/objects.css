@@ -26,6 +26,9 @@
 
 }
 
+.tab-content { display: none; }
+.tab-content.active { display: block; }
+
   .selected-option {
 	/* background-color: white; */
 	padding: 10px;
