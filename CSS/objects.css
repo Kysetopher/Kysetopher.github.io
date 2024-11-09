@@ -48,6 +48,10 @@
 	padding: 10px;
 	cursor: pointer;
   }
+  .selected-option:hover{
+	background-color: var(--primary);
+	color:white;
+  }
   
   .dropdown-options {
 	display: none;
