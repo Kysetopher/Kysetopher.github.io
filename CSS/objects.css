@@ -21,26 +21,12 @@
 	height:400px;
 }
    
-#name {
-	font-size:25px;
-	
-	padding-left:20px;
-	height:40px;
-}
 #medium {
 	font-style: italic;
-	font-size:20px;
-	padding-left:25px;
-	height:20px;
-
 
 }
 #description {
-	display:table-cell;
-	vertical-align:middle;
-	font-size:20px;
-	padding:25px;
-	height:100%;
+
 }
 
   .selected-option {
