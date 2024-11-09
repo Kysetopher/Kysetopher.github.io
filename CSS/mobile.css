@@ -27,6 +27,6 @@
 }
 .profile-picture {
 	position:absolute;
-	top:400px;
+	top: calc(55% - 300px);
 	left:60px;
   }
