@@ -4,7 +4,17 @@
 	overflow-y: auto;
 	overflow-x:hidden;
 }
+.profile-picture {
+    position: relative;
+    height: 600px;
+    width: 100%;
 
+    background-size: contain; /* Change this to 'contain' to make sure the image is resized smaller if needed */
+    background-image: url(../Assets/profile-pic.png);
+    background-position: center;
+    background-repeat: no-repeat;
+   
+}
 #sketch {
 	outline: 0px;
 	width: 100%;
