@@ -1,29 +1,4 @@
 
-#toolbar {
-	padding-left:35%;
-	padding-right:auto;
-
-}
-#exit {
-	width:100px;
-}
-#drop {
-	
-	font-size:56px;
-	
-}
-#drop option {
-	
-	font-size:20px;
-	
-}
-#info{
-
-	width:600px;
-	padding-left:35%;
-
-}
-
 
 #name {
 	font-size:64px;
@@ -44,4 +19,9 @@
 	height:40px;
 
 
+}
+#sketch {
+	outline: 0px;
+	width: 100%;
+	height:200px;
 }
