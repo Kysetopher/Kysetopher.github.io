@@ -25,32 +25,27 @@
 	font-style: italic;
 
 }
-#description {
-
-}
 
   .selected-option {
-	background-color: white;
+	/* background-color: white; */
 	padding: 10px;
 	cursor: pointer;
   }
   .selected-option:hover{
-	background-color: var(--primary);
+	background-color: var(--primary)!important;
 	color:white;
   }
   
   .dropdown-options {
 	display: none;
-
-
 	width: 100%;
 	list-style: none;
 	padding: 0;
-	margin: 0;
   }
   
   .dropdown-options li {
-	padding: 10px;
+	padding:10px;
+	padding-left: 25px;
 	cursor: pointer;
   }
   
