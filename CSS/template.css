@@ -11488,7 +11488,7 @@ pre .code {
 }
 
 .header {
-  position: relative;
+  position:relative;
   height: 80vh;
   min-height: 600px;
   background-color: #000;
