@@ -8,3 +8,8 @@
 	top: calc(55% - 300px);
 	left:60px;
   }
+
+  .column-img{
+	display: hidden;
+	max-width:100%;
+   }
