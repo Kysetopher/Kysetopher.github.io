@@ -42,7 +42,7 @@
 }
 
 .tab-content { display: none; }
-.tab-content.active { display: block; }
+.tab-content.active { display:contents; }
 
   .selected-option {
 	/* background-color: white; */
