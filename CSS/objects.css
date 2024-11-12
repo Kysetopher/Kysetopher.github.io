@@ -14,7 +14,22 @@
 	padding-left:10vw;
     width: 100%; 
 	border-radius: 50% 10% 10% 50%; 
-   
+
+}
+body, .header, .header-content, .container {
+    pointer-events: none; /* Disable mouse interactions */
+	user-select: none;
+}
+.pdf-download {
+	pointer-events: all;
+	
+}
+#downloadButton {
+	
+    z-index: 100;
+	user-select:auto;
+	position: relative; 
+	
 }
 .profile-pic-column{
 	flex: 1;
