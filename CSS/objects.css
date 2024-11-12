@@ -1,11 +1,11 @@
 
 .scrollable-card {
-	max-height: 530px;
+	max-height: 500px;
 	overflow-y: auto;
 	overflow-x:hidden;
 }
 .scrollable-card-intrests {
-	max-height: 214px;
+	max-height: 205px;
 	overflow-y: auto;
 	overflow-x:hidden;
 }
