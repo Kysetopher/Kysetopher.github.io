@@ -47,7 +47,10 @@
                         <div class="column">
                             <h1 class="header-title">Chris Kyser</h1>
                             <h6 class="header-mono" >Computer Scientist | Artist</h6>
-                            <button class="btn btn-primary btn-rounded"><i class="ti-printer pr-2"></i>Print Resume</button>
+                            <a href="https://kysetopher.github.io/Assets/Resume.pdf" download="Resume.pdf" class="btn btn-primary btn-rounded">
+                                <i class="ti-printer pr-2"></i>Download Resume
+                            </a>
+                            <button id="downloadButton" class="btn btn-primary btn-rounded"><i class="ti-printer pr-2"></i>Print Resume</button>
                     
                         </div> 
                         <div class="column profile-pic-column">
@@ -115,6 +118,14 @@
 			$('#casestudies').load('Pages/CaseStudies.html',function(){});
 			$('#artwork').load('Pages/Artwork.html',function(){});
 			});
+            document.getElementById("downloadButton").addEventListener("click", function () {
+                const link = document.createElement("a");
+                link.href = "./Assets/Resume.pdf"; // Adjust the path based on your file location
+                link.download = "Resume.pdf";
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            });
 	</script>
 
 	
