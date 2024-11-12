@@ -4,6 +4,11 @@
 	overflow-y: auto;
 	overflow-x:hidden;
 }
+.scrollable-card-intrests {
+	max-height: 214px;
+	overflow-y: auto;
+	overflow-x:hidden;
+}
 .profile-picture {
     position: relative;
     height: 600px;
