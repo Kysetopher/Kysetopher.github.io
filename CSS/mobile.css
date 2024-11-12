@@ -4,9 +4,7 @@
 	height:200px;
 }
 .profile-picture {
-	position:absolute;
-	top: calc(55% - 300px);
-	left:60px;
+	border-radius:30px;
   }
 
   .column-img{
