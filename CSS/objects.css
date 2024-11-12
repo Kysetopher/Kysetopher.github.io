@@ -36,13 +36,7 @@ body{
     flex-wrap: wrap;
     width: 100%;
 }
-canvas {
-	pointer-events: all;
-}
-.btn{
-	pointer-events: all;
-}
-.nav-link{
+canvas, .social-link, .btn, .nav-link{
 	pointer-events: all;
 }
 #sketch {
