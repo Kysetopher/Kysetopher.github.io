@@ -22,10 +22,6 @@ body{
     pointer-events: none; 
 	user-select: none;
 }
-.pdf-download {
-	pointer-events: all;
-	
-}
 .pdf-download:hover{
 	background-color:white!important;
 	color:var(--primary)!important;
@@ -41,6 +37,12 @@ body{
     width: 100%;
 }
 canvas {
+	pointer-events: all;
+}
+.btn{
+	pointer-events: all;
+}
+.nav-link{
 	pointer-events: all;
 }
 #sketch {
