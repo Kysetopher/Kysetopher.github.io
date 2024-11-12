@@ -52,7 +52,7 @@
                     var sectionTop = section.offset().top;
                     var distance = Math.abs(currentScrollPos - sectionTop);
     
-                    if (distance < closestDistance && distance < 200) { // Set threshold for "closeness"
+                    if (distance < closestDistance && distance < 200) { 
                         closestSection = section;
                         closestDistance = distance;
                     }
