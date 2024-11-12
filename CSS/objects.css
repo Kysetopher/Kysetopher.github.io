@@ -27,7 +27,7 @@
 }
 
 .icon-row {
-	padding:10px;
+	padding-bottom:10px;
     display: flex;
     justify-content: space-around;
     gap: 1rem;
