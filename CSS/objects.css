@@ -1,10 +1,12 @@
 
 .scrollable-card {
+	pointer-events: all;
 	max-height: 500px;
 	overflow-y: auto;
 	overflow-x:hidden;
 }
 .scrollable-card-intrests {
+	pointer-events: all;
 	max-height: 205px;
 	overflow-y: auto;
 	overflow-x:hidden;
@@ -16,19 +18,17 @@
 	border-radius: 50% 10% 10% 50%; 
 
 }
-body, .header, .header-content, .container {
-    pointer-events: none; /* Disable mouse interactions */
+body{
+    pointer-events: none; 
 	user-select: none;
 }
 .pdf-download {
 	pointer-events: all;
 	
 }
-#downloadButton {
-	
-    z-index: 100;
-	user-select:auto;
-	position: relative; 
+.pdf-download:hover{
+	background-color:white!important;
+	color:var(--primary)!important;
 	
 }
 .profile-pic-column{
@@ -40,7 +40,9 @@ body, .header, .header-content, .container {
     flex-wrap: wrap;
     width: 100%;
 }
-
+canvas {
+	pointer-events: all;
+}
 #sketch {
 	outline: 0px;
 	width: 100%;
@@ -71,7 +73,7 @@ body, .header, .header-content, .container {
 .tab-content.active { display:contents; }
 
   .selected-option {
-	/* background-color: white; */
+	pointer-events: all;
 	padding: 10px;
 	cursor: pointer;
   }
@@ -91,6 +93,7 @@ body, .header, .header-content, .container {
 	padding:10px;
 	padding-left: 25px;
 	cursor: pointer;
+	pointer-events: all;
   }
   
   .dropdown-options li:hover {
