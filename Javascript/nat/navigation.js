@@ -41,10 +41,42 @@
             }
         }
 
+        function smoothScrollToClosestSection() {
+            var currentScrollPos = $(window).scrollTop();
+            var closestSection = null;
+            var closestDistance = Infinity;
+    
+            $('.navbar .nav-link').each(function() {
+                var section = $(this.hash);
+                if (section.length) {
+                    var sectionTop = section.offset().top;
+                    var distance = Math.abs(currentScrollPos - sectionTop);
+    
+                    if (distance < closestDistance && distance < 200) { // Set threshold for "closeness"
+                        closestSection = section;
+                        closestDistance = distance;
+                    }
+                }
+            });
+    
+            if (closestSection) {
+                $('html, body').animate({
+                    scrollTop: closestSection.offset().top
+                }, 700);
+            }
+        }
+
         // Highlight nav link when scrolling
-        $(window).on('scroll', function() {
-            highlightNavLinkOnScroll();
-        });
+            var idleTimer;
+    $(window).on('scroll', function() {
+        highlightNavLinkOnScroll();
+
+        clearTimeout(idleTimer);
+        idleTimer = setTimeout(function() {
+            smoothScrollToClosestSection();
+        }, 1000); // Trigger smooth scroll after 1 second of being idle
+    });
+
 
         // Initial highlight when page loads
         highlightNavLinkOnScroll();
