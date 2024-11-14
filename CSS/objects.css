@@ -65,8 +65,8 @@ canvas, .social-link, .btn, .nav-link{
  max-width:100%;
 }
 
-.tab-content { display: none; }
-.tab-content.active { display:contents; }
+/* .tab-content { display:contents; } */
+/* .tab-content.active { display:contents; } */ 
 
   .selected-option {
 	pointer-events: all;
