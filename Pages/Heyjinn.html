@@ -38,18 +38,17 @@
             <div class="collapse mt-sm-20 navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <a href="#home" class="nav-link">Home</a>
+                        <a href="../index.html#home" class="nav-link">Home</a>
                     </li>
 					<li class="nav-item">
-                        <a href="#casestudies" class="nav-link">Case Studies</a>
+                        <a href="../index.html#casestudies" class="nav-link">Case Studies</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#resume" class="nav-link">Resume</a>
-
+                        <a href="../index.html#resume" class="nav-link">Resume</a>
                     </li>
 					
                     <li class="nav-item">
-                        <a href="#artwork" class="nav-link">Artwork</a>
+                        <a href="../index.html#artwork" class="nav-link">Artwork</a>
                     </li>
                 </ul>
 				<ul class="navbar-nav brand">
@@ -226,21 +225,6 @@
         </div>            
     </section>
 </div>
-    <script>
-        document.querySelectorAll('.tab-button').forEach(button => {
-            button.addEventListener('click', () => {
-                const targetId = button.getAttribute('data-target');
-                const targetElement = document.getElementById(targetId);
-    
-                if (targetElement) {
-                    targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
-            });
-        });
-    
-        // Optional: add 'active' class to first tab content on page load
-        // document.querySelector('.tab-content').classList.add('active');
-    </script>
 	
 </body>
 </html>
