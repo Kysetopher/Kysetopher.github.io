@@ -11054,7 +11054,9 @@ p {
 }
 
 .card .card-header.has-icon i {
-  background: #fff;
+  background: transparent;
+  backdrop-filter: blur(10px); 
+  -webkit-backdrop-filter: blur(10px); 
   position: absolute;
   top: -28px;
   padding: 7px;
