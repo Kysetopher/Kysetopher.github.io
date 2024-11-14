@@ -65,9 +65,9 @@ canvas, .social-link, .btn, .nav-link{
  max-width:100%;
 }
 
-/* .tab-content { display:contents; } */
-/* .tab-content.active { display:contents; } */ 
-
+.case-study-card:hover{
+	
+}
   .selected-option {
 	pointer-events: all;
 	padding: 10px;
