@@ -110,13 +110,38 @@
 	<script src="Javascript/nat/navigation.js"></script>
 
 	<script type="text/javascript">
-			$(document).ready(function(e) {
-			$('#about').load('Pages/About.html',function(){});
-			$('#resume').load('Pages/Resume.html',function(){});
-			$('#casestudies').load('Pages/CaseStudies.html',function(){});
-			$('#artwork').load('Pages/Artwork.html',function(){});
-			});
-	</script>
+        $(document).ready(function() {
+            let loadedSections = 0;
+            const sectionsToLoad = 3; // Total number of sections to load
+    
+            // Load the content dynamically and count when each one is loaded
+            $('#resume').load('Pages/Resume.html', onSectionLoad);
+            $('#casestudies').load('Pages/CaseStudies.html', onSectionLoad);
+            $('#artwork').load('Pages/Artwork.html', onSectionLoad);
+    
+            // Function called each time a section finishes loading
+            function onSectionLoad() {
+                loadedSections++;
+                if (loadedSections === sectionsToLoad) {
+                    checkHashAndScroll();
+                }
+            }
+    
+            // Function to check the URL hash and scroll to the corresponding element
+            function checkHashAndScroll() {
+                const hash = window.location.hash;
+                if (hash) {
+                    const target = $(hash);
+                    if (target.length) {
+                        // Use jQuery to scroll to the target element
+                        $('html, body').animate({
+                            scrollTop: target.offset().top
+                        }, 1000); // Adjust the scroll speed if needed
+                    }
+                }
+            }
+        });
+    </script>
 
 	
 	
