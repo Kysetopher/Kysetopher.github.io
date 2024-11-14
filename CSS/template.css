@@ -11057,7 +11057,7 @@ p {
   background: #fff;
   position: absolute;
   top: -28px;
-  border: 7px solid white;
+  padding: 7px;
   overflow: hidden !important;
   font-size: 35px;
 }
