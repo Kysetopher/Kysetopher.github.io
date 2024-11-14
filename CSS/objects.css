@@ -65,8 +65,12 @@ canvas, .social-link, .btn, .nav-link, .case-study-card{
  max-width:100%;
 }
 
-.case-study-card:hover{
-	
+.case-study-card .card {
+	transition: box-shadow 0.3s ease; /* Smooth transition */
+}
+
+.case-study-card:hover .card {
+	box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Shadow on hover */
 }
   .selected-option {
 	pointer-events: all;
