@@ -70,7 +70,7 @@ canvas, .social-link, .btn, .nav-link, .case-study-card{
 }
 
 .case-study-card:hover .card {
-	box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Shadow on hover */
+	box-shadow: 0px 0px 2px var(--primary); /* Shadow on hover */
 }
   .selected-option {
 	pointer-events: all;
