@@ -36,7 +36,7 @@ body{
     flex-wrap: wrap;
     width: 100%;
 }
-canvas, .social-link, .btn, .nav-link{
+canvas, .social-link, .btn, .nav-link, .case-study-card{
 	pointer-events: all;
 }
 #sketch {
