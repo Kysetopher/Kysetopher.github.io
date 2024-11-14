@@ -11601,7 +11601,8 @@ pre .code {
 }
 
 .section {
-  padding: 80px 0;
+  padding:0px;
+  padding-top: 80px;
 }
 
 .section.bg-custom-gray {
