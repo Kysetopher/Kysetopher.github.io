@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    const scrollOffset = 80; // Set the offset value to 80px
+    const scrollOffset = 40; // Set the offset value to 80px
     let loadedSections = 0;
     const sectionsToLoad = 3; // Total number of sections to load
 
