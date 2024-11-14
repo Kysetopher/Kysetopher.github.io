@@ -1,4 +1,11 @@
-
+.ti-heyjinn:before {
+    content: "";
+    display: inline-block;
+    background: url(../Assets/icon/heyjinn.svg) no-repeat center;
+    width: 50px; /* Adjust width as needed */
+    height: 50px; /* Adjust height as needed */
+    background-size: contain;
+}
 .scrollable-card {
 	pointer-events: all;
 	max-height: 500px;
