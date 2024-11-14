@@ -53,20 +53,20 @@ $(document).ready(function() {
     // Function to highlight nav link based on scroll position
     function highlightNavLinkOnScroll() {
         const currentScrollPos = $(window).scrollTop();
-
+        const scrollOffset = 40;
+    
         $('.navbar .nav-link').each(function() {
             const section = $(this.hash);
             if (section.length) {
-                const sectionTop = section.offset().top - scrollOffset - 70; // Adjust for offset
-                const sectionBottom = sectionTop + section.outerHeight();
-
-                // Check if current scroll position is within this section's boundaries
-                if (currentScrollPos >= sectionTop && currentScrollPos < sectionBottom) {
+                const rect = section[0].getBoundingClientRect();
+    
+                if (rect.top >= 0 && rect.top < 100 - scrollOffset) {
                     $('.navbar .nav-link').removeClass('active');
                     $(this).addClass('active');
                 }
             }
         });
+    
 
         // Resize brand image based on scroll position
         if (currentScrollPos > 0) {
