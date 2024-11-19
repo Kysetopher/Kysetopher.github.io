@@ -11,3 +11,11 @@
 	display: hidden;
 	max-width:100%;
    }
+
+.social-link *:before{
+	font-size:64px;
+
+}
+.social-item{
+	padding:50px
+}
