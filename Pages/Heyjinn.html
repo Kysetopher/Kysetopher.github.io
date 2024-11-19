@@ -26,6 +26,22 @@
     <link rel="stylesheet" href="../CSS/template.css">
 
     <script type="text/javascript" src="../Javascript/lib/jquery-3.3.1.min.js" id="jQuery"></script>
+
+    <script>
+        // Dynamically load mobile CSS for mobile devices
+        (function loadMobileCSS() {
+            const head = document.getElementsByTagName('HEAD')[0];
+
+            if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
+                const cssMobile = document.createElement('LINK');
+                cssMobile.rel = 'stylesheet';
+                cssMobile.type = 'text/css';
+                cssMobile.href = '../CSS/mobile.css'; // Adjust path if necessary
+                head.appendChild(cssMobile);
+                console.log('Mobile CSS loaded:', cssMobile.href);
+            }
+        })();
+    </script>
 </head>
 	
 <body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
