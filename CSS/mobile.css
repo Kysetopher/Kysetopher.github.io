@@ -20,8 +20,23 @@
 	padding:50px
 }
 .nav-link {
-	font-size:40px;
+	font-size:36px;
 }
 .header {
 	height: 50vh;
+}
+.header-mono {
+	font-size:24px!important;
+}
+.card-body p {
+	font-size:22px;
+}
+.card-body h6 {
+	font-size:28px;
+}
+.card-header h4 {
+	font-size:36px;
+}
+h2 {
+	font-size:47px;
 }
