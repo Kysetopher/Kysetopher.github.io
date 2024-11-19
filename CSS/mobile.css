@@ -40,3 +40,7 @@
 h2 {
 	font-size:47px;
 }
+.col-md-4 {
+	max-width:100%;
+	flex-basis:100%;
+}
