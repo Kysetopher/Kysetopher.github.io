@@ -44,3 +44,9 @@ h2 {
 	max-width:100%;
 	flex-basis:100%;
 }
+.scrollable-card {
+	max-height: 70vh;
+}
+.scrollable-card-intrests{
+	max-height: 500px;
+}

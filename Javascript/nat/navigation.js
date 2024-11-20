@@ -1,7 +1,7 @@
 $(document).ready(function() {
-    const scrollOffset = 40; // Set the offset value to 80px
+    const scrollOffset = 40; 
     let loadedSections = 0;
-    const sectionsToLoad = 3; // Total number of sections to load
+    const sectionsToLoad = 3; 
 
     // Smooth scroll for navigation links
     $(".navbar .nav-link").on('click', function(event) {
@@ -50,10 +50,9 @@ $(document).ready(function() {
         }
     }
 
-    // Function to highlight nav link based on scroll position
+    // Resize brand image based on scroll position
     function highlightNavLinkOnScroll() {
         const currentScrollPos = $(window).scrollTop();
-        // Resize brand image based on scroll position
         if (currentScrollPos > 0) {
             $('.brand-img').removeClass('brand-img-full');
             $('.brand-img').addClass('brand-img-small');
