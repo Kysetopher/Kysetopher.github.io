@@ -9,13 +9,13 @@
 }
 .scrollable-card {
 	pointer-events: all;
-	max-height: 500px;
+	max-height: 490px;
 	overflow-y: auto;
 	overflow-x:hidden;
 }
 .scrollable-card-intrests {
 	pointer-events: all;
-	max-height: 205px;
+	max-height: 195px;
 	overflow-y: auto;
 	overflow-x:hidden;
 }
