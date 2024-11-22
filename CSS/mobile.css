@@ -28,7 +28,7 @@
 .header-mono {
 	font-size:24px!important;
 }
-.card-body p {
+.card-body p , li{
 	font-size:22px;
 }
 .card-body h6 {
