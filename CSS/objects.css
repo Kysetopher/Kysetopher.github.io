@@ -44,7 +44,7 @@ body{
     flex-wrap: wrap;
     width: 100%;
 }
-canvas, .social-link, .btn, .nav-link, .case-study-card, .navbar-toggler-icon{
+canvas, .social-link, .btn, .nav-link, .case-study-card, .navbar-toggler-icon, a{
 	pointer-events: all;
 }
 #sketch {
