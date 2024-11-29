@@ -92,12 +92,14 @@ opacity: 0.6; /* Add rotation for a dynamic effect */
 	border: 3px solid var(--primary);
 }
 .hover-img {
+	width: 30px; 
+    height: 30px;
 	opacity: 0;
 	transform: translateX(-20px); 
 	transition: all 0.3s ease;
 	white-space: nowrap;
 	color:var(--primary);
-	filter: brightness(0) saturate(100%) invert(36%) sepia(90%) saturate(569%) hue-rotate(300deg) brightness(97%) contrast(94%);
+	filter: brightness(0) saturate(100%) invert(36%) sepia(90%) saturate(569%) hue-rotate(305deg) brightness(97%) contrast(94%);
 
   }
 .heyjinn-link:hover .hover-img {
