@@ -65,9 +65,28 @@ canvas, .social-link, .btn, .nav-link, .case-study-card, .navbar-toggler-icon, a
     gap: 1rem;
 }
 
+  
+
+
+ 
 .icon {
     width: 48px; 
     height: 48px;
+}
+
+
+a:hover .icon {
+opacity: 0.6; /* Add rotation for a dynamic effect */
+}
+
+.heyjinn-link{
+	padding:10px;
+	border-radius:5px;
+	border: 1px solid #ffffff00; /* Add rotation for a dynamic effect */
+}
+
+.heyjinn-link:hover  {
+	border: 1px solid var(--primary); /* Add rotation for a dynamic effect */
 }
 .column-img{
  max-width:100%;
