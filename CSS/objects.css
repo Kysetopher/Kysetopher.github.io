@@ -80,14 +80,32 @@ opacity: 0.6; /* Add rotation for a dynamic effect */
 }
 
 .heyjinn-link{
+	position: relative;
+	display: inline-flex;
+	align-items: center;
 	padding:10px;
 	border-radius:5px;
-	border: 1px solid #ffffff00; /* Add rotation for a dynamic effect */
+	border: 3px solid #ffffff00; /* Add rotation for a dynamic effect */
 }
 
 .heyjinn-link:hover  {
-	border: 1px solid var(--primary); /* Add rotation for a dynamic effect */
+	border: 3px solid var(--primary);
 }
+.hover-img {
+	opacity: 0;
+	transform: translateX(-20px); 
+	transition: all 0.3s ease;
+	white-space: nowrap;
+	color:var(--primary);
+	filter: brightness(0) saturate(100%) invert(36%) sepia(90%) saturate(569%) hue-rotate(300deg) brightness(97%) contrast(94%);
+
+  }
+.heyjinn-link:hover .hover-img {
+	opacity: 1; 
+	transform: translateX(0); 
+}
+
+
 .column-img{
  max-width:100%;
 }
