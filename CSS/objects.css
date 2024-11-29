@@ -83,13 +83,13 @@ opacity: 0.6; /* Add rotation for a dynamic effect */
 	position: relative;
 	display: inline-flex;
 	align-items: center;
-	padding:10px;
+	padding:10px 10px 10px 10px;
 	border-radius:5px;
 	border: 3px solid #ffffff00; /* Add rotation for a dynamic effect */
 }
 
 .heyjinn-link:hover  {
-	
+
 	border: 3px solid var(--primary);
 }
 
@@ -109,6 +109,7 @@ opacity: 0.6; /* Add rotation for a dynamic effect */
 	transform: translateX(0); 
 }
 .heyjinn-link:hover .blur{
+	opacity: 15%;
 	filter: blur(1px); 
 	transition: filter 0.3s ease; 
   }
