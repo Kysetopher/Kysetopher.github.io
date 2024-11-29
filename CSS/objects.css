@@ -89,8 +89,10 @@ opacity: 0.6; /* Add rotation for a dynamic effect */
 }
 
 .heyjinn-link:hover  {
+	
 	border: 3px solid var(--primary);
 }
+
 .hover-img {
 	width: 30px; 
     height: 30px;
@@ -106,6 +108,10 @@ opacity: 0.6; /* Add rotation for a dynamic effect */
 	opacity: 1; 
 	transform: translateX(0); 
 }
+.heyjinn-link:hover .blur{
+	filter: blur(1px); 
+	transition: filter 0.3s ease; 
+  }
 
 
 .column-img{
